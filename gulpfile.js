@@ -42,7 +42,7 @@ gulp.task('js', function() {
 
 gulp.task('watch', function() {
 	gulp.watch('_dev/styles/**/*.scss', ['sass']);
-	gulp.watch('_dev/scripts/*.js', ['js']);
+	//gulp.watch('_dev/scripts/*.js', ['js']);
 });
 
 
@@ -50,9 +50,9 @@ gulp.task('build', function() {
 	gulp.src('assets/css/*.css')
 		.pipe(cssnano())
 		.pipe(gulp.dest('assets/css/'));
-	gulp.src('assets/js/master.js')
-		.pipe(uglify())
-		.pipe(gulp.dest('assets/js/'));
+	// gulp.src('assets/js/master.js')
+	// 	.pipe(uglify())
+	// 	.pipe(gulp.dest('assets/js/'));
 })
 
 gulp.task('default', ['watch']);
