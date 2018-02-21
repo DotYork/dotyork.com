@@ -3,6 +3,9 @@
 //------------------------------------//
 
 .b-container {
+	position: relative;
+	z-index: 1;
+	
 	width: 100%;
 	max-width: $bp-max;
 	margin: 0 auto;

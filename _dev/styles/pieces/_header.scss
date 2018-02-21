@@ -16,11 +16,6 @@
 	width: 100%;
 
 	padding: 40px 0;
-	color: white;
-
-	a {
-		color: white;
-	}
 
 	@include mq(767px, max) {
 		padding: 15px 0;
@@ -28,11 +23,22 @@
 }
 
 body.home .p-header {
-	background: $color-purple;
+	background: $color-yellow;
+	color: black;
+
+	a {
+		color: black;
+	}
 }
 
 body.blog .p-header {
 	background: $color-purple;
+
+	color: white;
+
+	a {
+		color: white;
+	}
 }
 
 

@@ -1,50 +1,18 @@
-.p-home__hero {
-	position: relative;
-	overflow: hidden;
-
-	display: flex;
-	flex-direction: column;
-
-	height: calc(100vh - 117px);
-
-	margin-top: 117px;
-
-	background: $color-purple url('/assets/img/bg.png') top center no-repeat;
-	background-size: 900px;
-
-	text-align: center;
-	color: white;
-
-	h1 {
-		margin-bottom: 50px;
-
-		@include mq($bp-tablet, max) {
-			margin-bottom: 30px;
-		}
-	}
-
-	.b-btn {
-		margin-top: 50px;
-	}
-
-	div {
-		margin: auto;
-	}
+//	Home
+//  ====
 
 
-	@media screen and (max-height: 600px) {
-		height: auto !important;
-		padding: 100px 0;
 
-		@include mq($bp-tablet, max) {
-			padding: 60px 0;
-		}
-	}
 
-	@include mq($bp-tablet, max) {
-		margin-top: 60px;
-	}
-}
+
+
+
+
+
+
+
+
+
 
 .p-home__about {
 

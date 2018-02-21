@@ -12,7 +12,8 @@
 //		Button
 //		Hint
 
-
+//	Footer
+//	Hero
 
 
 
@@ -21,9 +22,7 @@
 //------------------------------------//
 
 .p-newsletter {
-	padding: 60px 20px;
-	background: $color-green;
-	color: white;
+	
 	text-align: center;
 }
 
@@ -110,8 +109,37 @@
 
 	.p-newsletter__form__hint {
 		margin-top: 25px;
-		color: white;
 	}
+
+
+
+
+
+//------------------------------------//
+//  Footer
+//------------------------------------//
+
+.p-newsletter--footer {
+	padding: 60px 20px;
+	background: $color-green;
+	color: white;
+}
+
+
+
+
+
+//------------------------------------//
+//  Hero
+//------------------------------------//
+
+.p-newsletter--hero {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 20px 20px;
+	background: rgba(white, 0.4);
+	color: black;
+}
 
 
 

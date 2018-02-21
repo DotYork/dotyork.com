@@ -49,12 +49,8 @@ h1, h2, h3, h4, h5, h6 {
 //------------------------------------//
 
 .t-xxl {
-	@include font-size(85);
+	@include font-size(70);
 	line-height: 1.1;
-
-	@include mq($bp-desktop, max) {
-		@include font-size(70);
-	}
 
 	@include mq($bp-tablet, max) {
 		@include font-size(55);

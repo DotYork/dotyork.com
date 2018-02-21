@@ -1,5 +1,5 @@
 
-<div id="mc_embed_signup" class="p-newsletter">
+<div id="mc_embed_signup" class="p-newsletter p-newsletter--footer">
 
 	<h3 class="t-s p-section__title is-yellow p-newsletter__title">Subscribe for updates</h3>
 

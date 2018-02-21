@@ -1,8 +1,53 @@
-<h1 class="t-xxl t-weight-bold">
-	<perch:content id="heading" type="textarea" label="Heading" html="true" />
-</h1>
-<p class="t-l"><perch:content id="subheading" label="Subheading" size="l" /></p>
+<section id="top" class="p-hero">
+	<div class="b-container">
 
-<perch:if exists="btn_url">
-	<a href="<perch:content id="btn_url" label="Button Url" />" class="b-btn b-btn--positive" ><perch:content id="btn_text" type="text" label="Button Text" /></a>
-</perch:if>
+		<h1 class="t-xxl t-weight-bold p-hero__title">
+			<perch:content id="heading" type="textarea" label="Heading" html="true" />
+		</h1>
+
+		<p class="t-l t-weight-bold p-hero__subtitle"><perch:content id="subheading" label="Subheading" size="l" /></p>
+
+		<perch:if exists="btn_url">
+
+			<!-- I haven’t done the button style yet -->
+
+			<a href="<perch:content id="btn_url" label="Button Url" />" class="b-btn b-btn--positive p-hero__btn" ><perch:content id="btn_text" type="text" label="Button Text" /></a>
+
+		<perch:else />
+
+			<div id="mc_embed_signup" class="p-newsletter p-newsletter--hero p-hero__form">
+
+				<h3 class="t-s p-section__title p-newsletter__title">Subscribe for updates</h3>
+
+				<form action="//dotyork.us3.list-manage.com/subscribe/post?u=a12578ad4e02415ccc40d4c6d&amp;id=47990ca15e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate p-newsletter__form" target="_blank" novalidate>
+
+				    <div id="mc_embed_signup_scroll">
+					
+						<div class="mc-field-group">
+							<label for="mce-EMAIL" class="p-newsletter__form__label">Email Address </label>
+
+							<input type="email" value="" name="EMAIL" class="required email p-newsletter__form-field__email" id="mce-EMAIL" placeholder="you@domain.com">
+
+							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="b-btn b-btn--positive p-newsletter__form-field__btn">
+						</div>
+
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+
+					    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a12578ad4e02415ccc40d4c6d_47990ca15e" tabindex="-1" value=""></div>
+				    </div>
+
+				    <p class="t-s p-newsletter__form__hint">Unsubscribe any time. No spam, ever.</p>
+				</form>
+
+			</div>
+
+		</perch:if>
+
+
+	</div>
+
+	<span class="p-hero__decoration"></span>
+</section>

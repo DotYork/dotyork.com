@@ -6,8 +6,7 @@
     'nav'		=> 'event'
   ]); 
 
-  //perch_layout('2017/home');
-  perch_layout('2017/noevent');
+  perch_layout('2018/noevent');
 
   perch_layout('global/footer');
  ?>

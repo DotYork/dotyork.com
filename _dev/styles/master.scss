@@ -72,14 +72,19 @@
 
 @import "pieces/header";
 @import "pieces/footer";
+
 @import "pieces/section";
 @import "pieces/page";
+
 @import "pieces/grid";
 
-@import "pieces/archive";
+@import "pieces/newsletter";
+@import "pieces/hero";
 
-@import "pieces/home-holding";
-@import "pieces/home";
+
+
+
+@import "pieces/archive";
 @import "pieces/event-archive";
 @import "pieces/speaker-list";
 @import "pieces/speaker";
@@ -89,5 +94,15 @@
 @import "pieces/share-list";
 @import "pieces/sessions";
 @import "pieces/schedule";
-@import "pieces/newsletter";
+
+
+
+
+
+
+//------------------------------------//
+//  Pages
+//------------------------------------//
+
+@import "pages/home";
 
