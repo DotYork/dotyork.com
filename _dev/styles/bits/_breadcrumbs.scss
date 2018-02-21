@@ -1,0 +1,46 @@
+//	Breadcrumbs
+//  ===========
+
+//	For:
+//	Navigation Breadcrumbs
+
+
+
+
+
+//------------------------------------//
+//  Config
+//------------------------------------//
+
+$use-breadcrumbs		: false !default;
+
+$breadcrumb-delimeter	: "\002F";
+
+
+
+
+
+//------------------------------------//
+//  Code
+//------------------------------------//
+
+@if $use-breadcrumbs == true{
+
+.b-breadcrumbs {
+  @extend .b-nav;
+  
+  li {
+    
+    // Style root
+    &:first-child { font-weight: bold;}
+      
+    // Delimeter
+    &+li:before { content:$breadcrumb-delimeter "\00A0";}
+   
+    // Un-link current  
+    &:last-child a { text-decoration: none; cursor: text; color: black;}
+  }
+  
+}
+
+}

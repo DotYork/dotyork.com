@@ -1,0 +1,116 @@
+//	Helpers
+//  =======
+
+//	For:
+//	Small helper classes
+
+
+
+//	Images
+//		Floats
+//		Shapes
+
+//	Floats
+
+//	Text
+//		Align
+
+//	Hide Things
+
+
+
+
+
+//------------------------------------//
+//  Images
+//------------------------------------//
+
+img, .u-img {
+	max-width: 100%;
+	width: 100%;
+}
+
+
+
+//
+//	Floats
+//
+
+.u-img--right {
+	float: right;
+	margin-left: $gutter;
+	margin-bottom: $gutter;
+}
+
+.u-img--left {
+	float: left;
+	margin-right: $gutter;
+	margin-bottom: $gutter;
+}
+
+
+
+//
+//	Shapes
+//
+
+.u-img--rounded {
+	border-radius: $border-radius;
+}
+
+.u-img--circle {
+	border-radius: 100%;
+}
+
+
+
+
+
+//------------------------------------//
+//  Floats
+//------------------------------------//
+
+.u-float--right 	{ float: right;}
+.u-float--left 	{ float: left;}
+
+
+
+
+
+//------------------------------------//
+//  Text
+//------------------------------------//
+
+//
+//	Alignment
+//
+
+.u-text--left 	{ text-align: left 		!important;}
+.u-text--right 	{ text-align: right 	!important;}
+.u-text--center 	{ text-align: center 	!important;}
+
+
+
+
+
+//------------------------------------//
+//  Hide Things
+//------------------------------------//
+
+.u-hide-text {
+	@include inline-block;
+	text-indent: -999em;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.u-visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+
+
+

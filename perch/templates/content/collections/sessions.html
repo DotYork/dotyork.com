@@ -1,0 +1,16 @@
+<perch:content id="title" type="text" title="true" label="Title" />
+<perch:content id="slug" type="slug" for="title" editable="true" label="slug" />
+
+<perch:content id="desc" type="textarea" markdown="true" editor="simplemde" size="s" label="Description" />
+
+<perch:content id="image" type="image" label="Image" />
+<perch:content id="image_alt" type="text" label="Alt" />
+
+<perch:related id="event" collection="Events" label="Event" size="m">
+	<perch:content id="slug" type="slug" />
+	<perch:content id="date" type="date" />
+</perch:related>
+
+<perch:related id="speakers" collection="Speakers" label="Speakers" size="m">
+	<perch:content id="slug" type="slug" />
+</perch:related>

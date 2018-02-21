@@ -1,0 +1,129 @@
+.p-home__hero {
+	position: relative;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+
+	height: calc(100vh - 117px);
+
+	margin-top: 117px;
+
+	background: $color-purple url('/assets/img/bg.png') top center no-repeat;
+	background-size: 900px;
+
+	text-align: center;
+	color: white;
+
+	h1 {
+		margin-bottom: 50px;
+
+		@include mq($bp-tablet, max) {
+			margin-bottom: 30px;
+		}
+	}
+
+	.b-btn {
+		margin-top: 50px;
+	}
+
+	div {
+		margin: auto;
+	}
+
+
+	@media screen and (max-height: 600px) {
+		height: auto !important;
+		padding: 100px 0;
+
+		@include mq($bp-tablet, max) {
+			padding: 60px 0;
+		}
+	}
+
+	@include mq($bp-tablet, max) {
+		margin-top: 60px;
+	}
+}
+
+.p-home__about {
+
+}
+
+.p-home__tickets {
+	background: $color-blue url('/assets/img/bg.png') right bottom no-repeat;
+	background-size: cover;
+
+	p {
+		margin-bottom: 30px;
+		color: white;
+
+		strong {
+			color: $color-yellow;
+		}
+	}
+}
+
+.p-home__about {
+
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+
+
+// .p-home__partners {
+// 	padding: 100px 0;
+
+// 	@include mq($bp-tablet, max) {
+// 		padding: 60px 0;
+// 	}
+// }
+
+
+.p-home__location {
+	position: relative;
+	background: $color-blue url('/assets/img/bg.png') bottom center no-repeat;
+	background-size: 900px;
+	color: white;
+	overflow: hidden;
+
+	.t-xl {
+		margin-bottom: 20px;
+		line-height: 1;
+		color: white;
+	}
+
+	.p-home__location__image {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		
+		width: 50%;
+		height: 100vh;
+
+		filter: saturate(0%);
+		opacity: 0.65;
+
+		background: url('/assets/img/york.jpg') bottom left no-repeat;
+		background-size: cover;
+
+		@include mq($bp-tablet, max) {
+			display: none;
+		}
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+
+.p-home__blog {
+	padding: 100px 0;
+
+	@include mq($bp-tablet, max) {
+		padding: 60px 0;
+	}
+}

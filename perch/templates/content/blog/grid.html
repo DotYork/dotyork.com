@@ -1,0 +1,21 @@
+<perch:before>
+	<ul class="p-grid p-grid--blog">
+</perch:before>
+
+	<li class="p-grid-item">
+		<a href="/blog/<perch:content id="slug" />">
+
+			<img src="<perch:content id="image" type="image" width="300" height="300" density="1.5" />" alt="<perch:content id="image_alt" />" class="p-grid-item__image" />
+
+			<span class="p-grid-item__title"><perch:content id="title" /></span>
+
+			<p class="t-s p-grid-item__desc"><perch:content id="excerpt" type="textarea" markdown="true" striptags="true" /></p>
+
+			<span class="p-page__read-more p-grid-item__read-more">Read more &raquo;</span>
+
+		</a>
+	</li>
+
+<perch:after>
+	</ul>
+</perch:after>

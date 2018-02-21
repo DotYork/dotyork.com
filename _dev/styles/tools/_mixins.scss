@@ -1,0 +1,228 @@
+//	Mixins
+//  ======
+
+
+
+//	Typography
+//		rem
+//		font-size
+//		adjust
+//		render
+
+//	Layout
+//		grid
+//			basic
+//			flush
+//			new row
+
+//	Media Query
+
+//	Images
+
+//	Animation
+//		Transition
+
+//	Inline Block
+
+//	Placeholder
+
+
+
+
+
+//------------------------------------//
+//  Typography
+//------------------------------------//
+
+//	https://gist.github.com/1670945#gistcomment-78254
+
+//
+//	REM
+//
+
+@mixin rem($attribute, $value) {
+	#{$attribute}: #{$value}px;
+	#{$attribute}: #{$value / 16}rem;
+}
+
+
+
+//
+//	Font-Size
+//
+
+@mixin font_size($size) {
+	@include rem(font-size, $size);
+}
+
+
+
+//
+//	Adjust
+//
+
+@mixin text-size-adjust {
+	-webkit-text-size-adjust: 100%;
+	   -moz-text-size-adjust: 100%;
+	    -ms-text-size-adjust: 100%;
+	     -o-text-size-adjust: 100%;
+	        text-size-adjust: 100%;
+}
+
+
+
+//
+//	Render
+//
+
+@mixin text-rendering {
+	-webkit-text-rendering: optimizeLegibility;
+	   -moz-text-rendering: optimizeLegibility;
+	    -ms-text-rendering: optimizeLegibility;
+	     -o-text-rendering: optimizeLegibility;
+	        text-rendering: optimizeLegibility;
+}
+
+
+
+
+
+//------------------------------------//
+//  Layout
+//------------------------------------//
+
+
+
+//
+//	Grid
+//
+
+	// Basic
+
+	@mixin grid-basic($cols) {
+		display: inline;
+		float: left;
+	       
+	    width: ((($grid-column-width*($cols)) + ($grid-gutter*($cols - 1))) / (($grid-column-width*$grid-columns)+($grid-gutter*($grid-columns - 1))))*100%;
+	    
+	    margin-left: ($grid-gutter/(($grid-column-width*$grid-columns)+($grid-gutter*($grid-columns - 1))))*100%;
+	    
+	    &:first-child { margin-left: 0;}
+	}
+
+
+	// Flush
+
+	@mixin grid-flush($cols) {
+	    display: inline;
+	    float: left;
+	    width: ((($grid-column-width*($cols)) + ($grid-gutter*($cols))) / (($grid-column-width*$grid-columns)+($grid-gutter*($grid-columns))))*100%;
+	}
+
+
+	// New Row
+
+	@mixin grid-row() {
+	    clear: both;
+	    margin-left: 0;
+	}
+
+
+
+
+
+//------------------------------------//
+//  Media Query
+//------------------------------------//
+
+// 	@stu_robson: http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+// 	slightly adapated by me
+//	examples at the link above
+
+@mixin mq($point, $query1: min, $query2: width) {
+ 
+    .lt-ie9 & {
+        @content;
+    }
+    
+    @media screen and (#{$query1}-#{$query2}: $point) {
+        @content;
+    }
+}
+
+
+
+
+
+//------------------------------------//
+//  Images
+//------------------------------------//
+
+@mixin background-image($file, $type, $width, $height) {
+	background-image: url($file + '.' + $type);
+	background-repeat: no-repeat;
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (-moz-min-device-pixel-ratio: 2),
+	    only screen and (-o-min-device-pixel-ratio: 2/1),
+	    only screen and (min-device-pixel-ratio: 2),
+	    only screen and (min-resolution: 192dpi),
+	    only screen and (min-resolution: 2dppx){
+	    & {
+			background-image: url($file + '@2x.' + $type);
+		      -webkit-background-size: $width $height;
+		         -moz-background-size: $width $height;
+		           -o-background-size: $width $height;
+		              background-size: $width $height;
+	    }
+	}
+}
+
+
+
+
+
+//------------------------------------//
+//  Animation
+//------------------------------------//
+
+//
+//	Transition
+//
+
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	   -moz-transition: $transition;
+	   	-ms-transition: $transition;
+	   	 -o-transition: $transition;
+	   	    transition: $transition; 
+}
+
+
+
+
+
+//------------------------------------//
+//  Inline Block
+//------------------------------------//
+
+@mixin inline-block {
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+
+
+
+
+//------------------------------------//
+//  Placeholder
+//------------------------------------//
+
+@mixin placeholder {
+  &.placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
+}
+

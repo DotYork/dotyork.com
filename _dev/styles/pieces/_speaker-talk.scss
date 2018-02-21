@@ -1,0 +1,188 @@
+.p-talk {
+
+}
+
+	.p-talk--two {
+		border-top: solid 10px $color-blue;
+	}
+
+.p-talk__title {
+	margin-bottom: 30px;
+}
+
+.p-talk__embed {
+	margin-bottom: 24px;
+}
+
+.p-talk__desc {
+
+	@include mq(768px) {
+		columns: 2;
+
+		p {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.p-talk__meta {
+	margin-bottom: 20px;
+	font-style: italic;
+}
+
+.p-talk__tickets {
+	padding: 100px 20px;
+	text-align: center;
+
+	p {
+		margin-bottom: 20px;
+	}
+}
+
+.p-talk__tickets__name {
+	max-width: $bp-tablet;
+	margin: 0 auto 20px auto;
+}
+
+p.p-talk__tickets__date {
+	color: $color-yellow;
+}
+
+
+
+
+
+
+
+// .p-video {
+// }
+
+// .p-video__main {
+// 	//@include grid-flush(7);
+// 	margin: 0;
+// 	padding: 100px 24px;
+
+// 	background: white;
+
+// 	@include mq(900px, max) {
+// 		width: 100%;
+// 		clear: both;
+// 		margin-left: 0;
+// 	}
+
+// 	@include mq($bp-desktop, max) {
+// 		padding: 60px 24px;
+// 	}
+// }
+
+// .p-video__main-meta {
+// 	margin-bottom: 30px;
+// 	color: $color-purple
+// }
+
+
+
+// .p-video__main-header {
+// 	margin-bottom: 50px;
+
+// 	h2 {
+// 		color: $color-dark;
+// 		font-weight: $font-weight-bold;
+// 	}
+// }
+
+
+
+// .p-video__aside {
+// 	@include grid-flush(5);
+
+// 	background: $color-blue url('/assets/img/bg.png') bottom center no-repeat;
+// 	color: white;
+
+// 	@include mq(900px, max) {
+// 		width: 100%;
+// 		clear: both;
+// 		margin-left: 0;
+// 		margin-top: 12px;
+// 	}
+// }
+
+// 	.p-video__aside--tickets {
+// 		p {
+// 			margin-bottom: 30px;
+// 		}
+// 	}
+
+
+// .p-video__aside-list {
+// 	margin-bottom: 24px;
+
+// 	clear: left;
+// 	display: block !important;
+
+// 	img {
+// 		margin-bottom: 24px;
+// 		width: 50px;
+// 		height: 50px;
+// 		margin-right: 12px;
+// 		border-radius: 100%;
+// 	}
+
+// 	h4 {
+// 		font-size: 14px;
+// 	}
+
+// 	a {
+// 		color: white;
+// 		text-decoration: none;
+// 	}
+// }
+
+
+// .p-video__main-share {
+// 	margin-top: 24px;
+// 	padding-top: 12px;
+// 	border-top: solid 1px $color-secondary-text;
+// }
+
+
+// .p-video__main-body {
+// 	p {
+// 		margin-bottom: .5em;
+// 	}
+// }
+
+// .p-video__main-notes {
+// 	p {
+// 		margin-bottom: .5em;
+// 		font-style: italic;
+// 	}
+// }
+
+// .p-video__main-links {
+// 	margin-bottom: 1em;
+
+// 	ul {
+// 		list-style: none;
+// 		margin: 0;
+// 		padding: 0;	
+// 	}
+
+// 	a {
+// 		display: inline;
+// 		color: $color-text;
+// 		border-bottom: solid 1px $color-link;
+// 		text-decoration: none;
+
+// 		&:hover {
+// 			border-bottom: solid 1px white;
+// 		}
+// 	}
+
+// 	li:before {
+// 		margin-right: 5px;
+// 		width: 15px;
+// 		text-align: center;
+// 		vertical-align: middle;
+// 	}
+// }

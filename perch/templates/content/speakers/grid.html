@@ -1,0 +1,25 @@
+<perch:before>
+	<ul class="p-grid p-grid--speakers">
+</perch:before>
+
+	<perch:if id="show-talk" match="eq" value="true">
+		<li class="p-grid-item has-talk">
+	<perch:else />
+		<li class="p-grid-item no-talk">
+	</perch:if>
+		<a href="/speakers/<perch:content id="slug" />">
+
+			<img src="<perch:content id="photo" type="image" width="200" height="200" density="1.5" />" alt="<perch:content id="first_name" /> <perch:content id="last_name" />" class="p-grid-item__image" />
+
+			<span class="p-grid-item__title"><perch:content id="first_name" /> <perch:content id="last_name" /></span>
+
+			<perch:if id="show-talk" match="eq" value="true">
+				<span class="p-grid-item__desc"><perch:content id="talk" /></span>
+			</perch:if>
+			
+		</a>
+	</li>
+
+<perch:after>
+	</ul>
+</perch:after>

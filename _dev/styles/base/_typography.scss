@@ -1,0 +1,257 @@
+//	Typography
+//  =========
+
+//	Headings
+
+//	Links
+
+//	Paragraphs
+
+//	Decoration
+//		Italic
+//		Bold
+
+//	Lists
+//		ul
+//		ol
+//		nested
+//		dl
+
+
+
+
+
+//------------------------------------//
+//	Headings
+//------------------------------------//
+
+//	H1-H6
+
+//	Hat Tip:
+//	http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+
+	font-family: $heading-font-family;
+	font-weight: $font-weight;
+	@include font-size($font-size);
+}
+
+
+
+
+
+//------------------------------------//
+//  Font Sizes
+//------------------------------------//
+
+.t-xxl {
+	@include font-size(85);
+	line-height: 1.1;
+
+	@include mq($bp-desktop, max) {
+		@include font-size(70);
+	}
+
+	@include mq($bp-tablet, max) {
+		@include font-size(55);
+	}
+
+	@include mq($bp-mobile, max) {
+		@include font-size(35);
+	}
+}
+
+.t-xl {
+	@include font-size(70);
+	line-height: 1.1;
+
+	@include mq($bp-desktop, max) {
+		@include font-size(40);
+	}
+
+	@include mq($bp-tablet, max) {
+		@include font-size(30);
+	}
+
+	@include mq($bp-mobile, max) {
+		@include font-size(22);
+		line-height: 1.3;
+	}
+}
+
+.t-lr {
+	@include font-size(40);
+	line-height: 1.1;
+
+	@include mq($bp-desktop, max) {
+		@include font-size(30);
+	}
+
+	@include mq($bp-tablet, max) {
+		@include font-size(22);
+	}
+
+	@include mq($bp-mobile, max) {
+		@include font-size(20);
+		line-height: 1.3;
+	}
+}
+
+.t-l {
+	@include font-size(26);
+
+	@include mq($bp-desktop, max) {
+		@include font-size(24);
+	}
+
+	@include mq($bp-tablet, max) {
+		@include font-size(20);
+		line-height: 1.3;
+	}
+
+	@include mq($bp-mobile, max) {
+		@include font-size(18);
+	}
+}
+
+.t-m {
+	@include font-size(16);
+}
+
+.t-s {
+	@include font-size(14);
+}
+
+.t-xs {
+	@include font-size(12);
+}
+
+
+.t-sub-head {
+	margin-bottom: 20px;
+	font-weight: $font-weight;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.t-weight-bold {
+	font-weight: $font-weight-bold;
+}
+
+.t-alt-font {
+	font-family: $alt-font-family;
+}
+
+
+
+
+
+//------------------------------------//
+//  Links
+//------------------------------------//
+
+a {
+	color: $color-link;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+	p a {
+		text-decoration: none;
+		border-bottom: solid 2px white;
+		color: $color-blue;
+
+		&:hover {
+			border-bottom: solid 2px $color-yellow;
+		}
+	}
+
+
+
+
+
+//------------------------------------//
+//  Paragraphs
+//------------------------------------//
+
+p {
+	@include font-size($font-size);
+	line-height: $line-height;
+}
+
+
+
+
+
+//------------------------------------//
+//  Decoration
+//------------------------------------//
+
+//
+//	Italic
+//
+
+i, em {
+	font-style: italic;
+}
+
+
+
+//
+//	Bold
+//
+
+strong, b {
+	font-weight: $font-weight-bold;
+}
+
+
+
+
+
+//------------------------------------//
+//  Lists
+//------------------------------------//
+
+ul, 
+ol {
+	line-height: $line-height;
+}
+
+
+
+//
+//	Ul
+//
+
+ul {
+	list-style: disc;
+}
+
+
+
+//
+//	Ol
+//
+
+ol {
+	list-style: decimal;
+}
+
+
+
+//
+//	Nested
+//
+
+ul,
+ol {
+	ol, 
+	ul {
+		margin-bottom: 0;
+	}
+}

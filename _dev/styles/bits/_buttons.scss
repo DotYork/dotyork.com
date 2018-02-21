@@ -1,0 +1,134 @@
+//  Buttons
+//  =======
+
+//  Hat-Tip:
+//  Loosely Based on beautons - a beautifully simple button toolkit.
+//  LICENSE - http://apache.org/licenses/LICENSE-2.0
+//  Copyright 2013 Harry Roberts
+//  @csswizardry -- csswizardry.com/beautons
+
+//  Modified by me
+
+
+
+
+
+//------------------------------------//
+//  Config
+//------------------------------------//
+
+$use-buttons            : true !default;
+
+
+
+
+
+//------------------------------------//
+//  Code
+//------------------------------------//
+
+@if $use-buttons == true {
+
+    //------------------------------------//
+    //  Basic
+    //------------------------------------//
+
+    .b-btn {
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        font-family: inherit;
+        font-size: 100%;
+        cursor: pointer;
+        
+        &, &:hover {
+            text-decoration: none;      // [9]
+        }
+        
+        &:active,
+        &:focus,
+        &:visited {
+            outline: none
+        }
+
+        height: 50px;
+        line-height: 48px;
+        font-weight: $font-weight-bold;
+        letter-spacing: 3px;
+        font-size: 13px;
+        border-radius: 25px;
+
+        padding: 0 40px;
+
+        text-transform: uppercase;
+
+        @include transition(all 0.1s ease-in-out);
+
+        @include mq($bp-mobile, max) {
+            padding: 0 20px;
+        }
+    }
+
+    .b-btn--theme {
+        border: solid 2px $color-yellow;
+        background: $color-yellow;
+        color: $color-dark;
+
+        &:hover {
+           border-color: $color-blue;
+           background: $color-blue;
+           color: white;
+        }
+    }
+
+
+    .b-btn--positive {
+        border: solid 1px $color-green;
+        background: $color-green;
+        color: white;
+
+        &:hover {
+            background: lighten($color-green, 10);
+        }
+    }
+
+    .b-btn--disabled {
+        border: solid 1px $color-neutral;
+        background: $color-neutral;
+        color: $color-text;
+
+        &:hover {
+            background: lighten($color-neutral, 10);
+        }
+    }
+
+    .b-btn--border {
+        border: solid 1px $color-neutral;
+        background: white;
+        color: $color-text;
+
+        &:hover {
+            border-color: $color-text;
+            color: $color-theme;
+        }
+    }
+
+    .b-btn--margin {
+        margin-top: 30px;
+    }
+
+    .b-btn--large {
+        height: 50px;
+        line-height: 48px;
+        padding: 0 60px;
+        font-size: 18px;
+    }
+
+    .b-btn--small {
+        height: 40px;
+        line-height: 38px;
+        padding: 0 20px;
+        font-size: 11px;
+    }
+
+}

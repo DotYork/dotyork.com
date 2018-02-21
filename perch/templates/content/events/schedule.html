@@ -1,0 +1,18 @@
+<perch:repeater id="schedule" label="Item">
+	<perch:before>
+		<ol class="p-schedule__list">
+	</perch:before>
+
+			<li class="p-schedule__item">
+				<h2 class="p-schedule__title">
+					<span class="p-schedule__time"><perch:content id="time" type="time" label="Time" format="G:i A" /></span>
+					<perch:content id="title" label="Title" />
+				</h2>
+
+				<perch:content id="desc" type="textarea" markdown="true" editor="simplemde" size="s" label="Description" />
+			</li>
+
+	<perch:after>
+		</ol>
+	</perch:after>
+</perch:repeater>

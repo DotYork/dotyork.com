@@ -1,0 +1,36 @@
+
+<div class="p-speaker b-media">
+	<div class="b-container b-container--smaller">
+		<img src="<perch:content id="photo" label="Headshot" type="image" width="200" density="1.5" />" alt="<perch:content id="title" />" class="p-speaker__img b-media__img" />
+
+		<div class="b-media__body">
+			<h1 class="t-lr p-speaker__name"><perch:content id="first_name" /> <perch:content id="last_name" /></h1>
+			<perch:if exists="job_title">
+				<p class="t-s p-section__title is-yellow p-speaker__title"><perch:content id="job_title" /></p>
+			</perch:if>
+
+			<div>
+				<div class="p-speaker__desc">
+					<perch:content id="about" type="textarea" label="About" markdown="true" editor="simplemde" size="s" />
+				</div>
+
+				<div class="p-speaker__links">
+					<ul class="b-nav b-nav--stacked">
+						<perch:if exists="twitter">
+							<li><a href="https://twitter.com/<perch:content id="twitter" />" class="icon--twitter"><span class="u-hide-text"><perch:content id="twitter" /></span></a></li>
+						</perch:if>
+						
+						<perch:if exists="url">
+							<li><a href="http://<perch:content id="url" />" class="icon--website"><span class="u-hide-text"><perch:content id="url" /></span></a></li>
+						</perch:if>
+
+						<perch:if exists="linkedin">
+							<li><a href="https://www.linkedin.com/in/<perch:content id="linkedin" />" class="icon--linkedin"><span class="u-hide-text"><perch:content id="linkedin" /></span></a></li>
+						</perch:if>
+					</ul>
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+</div>

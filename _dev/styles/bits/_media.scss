@@ -1,0 +1,89 @@
+//  Media Object
+//  ============
+
+//  For:
+//  Images next to text
+
+//  Hat-tip:
+//  http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+
+
+
+
+
+//------------------------------------//
+//  Config
+//------------------------------------//
+
+$use-media      : true !default;
+
+
+
+
+
+//------------------------------------//
+//  Code
+//------------------------------------//
+
+@if $use-media == true{
+
+    //------------------------------------//
+    //  Media
+    //------------------------------------//
+
+    .b-media {
+        display: block;
+        @extend %clearfix;
+    }
+
+
+
+
+
+    //------------------------------------//
+    //  Object
+    //------------------------------------//
+
+    .b-media__img, 
+    .b-media__object {
+        float: left;
+        margin-right: $gutter;
+    }
+
+
+    // Reverse image location
+    .b-media__img--rev, 
+    .b-media__object--rev {
+        float: right;
+        margin-left: $gutter;
+    }
+
+
+        .b-media__img img,
+        .b-media__img--rev img {
+            display: block;
+        }
+
+
+
+
+
+    //------------------------------------//
+    //  Body
+    //------------------------------------//
+
+    .b-media__body {
+        overflow:hidden;
+    }
+
+
+        .b-media__body,
+        .b-media__body > :last-child {
+            margin-bottom:0;
+        }
+
+
+
+
+
+}//endif

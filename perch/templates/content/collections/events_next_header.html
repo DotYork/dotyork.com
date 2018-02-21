@@ -1,0 +1,7 @@
+<div class="p-header__event p-section__title">
+	<perch:if exists="btn_url1">
+		<a href="/" class="icon--calendar">Next Event: <perch:content id="date" format="D jS M 'y" /></a>
+	<perch:else />
+		<span class="icon--calendar">Next Event: <perch:content id="title" /> - <perch:content id="date" format="D jS M 'y" /></span>
+	</perch:if>
+</div>

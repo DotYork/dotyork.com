@@ -1,0 +1,27 @@
+<perch:related id="related" collection="Speakers">
+	<perch:before>
+		<aside class="p-video__aside js-equalHeight">
+			<div class="b-half__inner">
+			<h3 class="t-s p-section__title is-yellow">Related</h3>
+			<ul class="b-nav b-nav--stacked">
+	</perch:before>
+			
+			<li class="p-video__aside-list">
+				<a href="/speakers/<perch:content id="slug" />" class="b-media">
+
+					<img src="<perch:content id="photo" label="Thumbnail" type="image" width="100" density="1.5" />" alt="<perch:content id="first_name" /> <perch:content id="last_name" />" class="b-media__img" />
+					
+					<h4 class="b-media__body">
+						<perch:content id="first_name" /> <perch:content id="last_name" /> - <perch:content id="talk" />
+					</h4>
+					
+				</a>
+				
+			</li>
+
+	<perch:after>
+		</ul>
+			</div>
+		</aside>
+	</perch:after>
+</perch:related>

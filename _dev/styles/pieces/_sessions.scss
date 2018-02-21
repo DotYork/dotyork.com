@@ -1,0 +1,72 @@
+.p-session-list {
+	margin: 100px 0 0 0;
+}
+
+.p-session-list--three li {
+	@include grid-basic(4);
+
+	padding-right: 24px;
+
+	&:nth-child(3n+4) {
+		clear: left;
+		margin-left: 0;
+	}
+
+	@include mq(600px, max) {
+		width: 100%;
+		margin-left: 0;
+		clear: left;
+		margin-bottom: 30px;
+	}
+}
+
+.p-session-list--four li {
+	@include grid-basic(3);
+
+	padding-right: 24px;
+
+	&:nth-child(4n+5) {
+		clear: left;
+		margin-left: 0;
+	}
+
+	@include mq(800px, max) {
+		@include grid-basic(6);
+		&:nth-child(odd) {
+			clear: left;
+			margin-left: 0;
+		}
+	}
+
+	@include mq(500px, max) {
+		width: 100%;
+		margin-left: 0;
+		clear: left;
+		margin-bottom: 30px;
+		padding-right: 0;
+	}
+}
+
+.p-session-in-list {
+
+}
+
+.p-session-in-list__img {
+	margin-bottom: 20px;
+	border: solid 3px transparent;
+}
+
+	.p-session-in-list a:hover .p-session-in-list__img {
+		border-color: $color-yellow;
+	}
+
+.p-session-in-list__title {
+	margin-bottom: 20px;
+	color: $color-purple;
+	border-bottom: solid 2px transparent;
+	display: inline-block;
+}
+
+	.p-session-in-list a:hover .p-session-in-list__title {
+		border-bottom: solid 2px $color-yellow;
+	}

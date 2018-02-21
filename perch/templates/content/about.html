@@ -1,0 +1,89 @@
+
+	<div class="p-page__header">
+		<h1 class="t-xl"><perch:content id="title" label="Title" /></h1>
+		<perch:if exists="meta">
+			<p class="t-s"><perch:content id="meta" label="Meta" type="text" help="optional" /></p>
+		</perch:if>
+	</div>
+
+	<div class="b-container b-container--small">
+
+		<div class="p-page has-margin">
+			<perch:blocks>
+				<perch:block type="text" label="Text">
+					<perch:template path="content/text_block.html" />
+				</perch:block>
+
+				<perch:block type="image" label="Image">
+					<perch:template path="content/image.html" />
+				</perch:block>
+
+				<perch:block type="button" label="Button">
+					
+					<perch:if id="type" match="neq" value="disabled">
+						<a href="<perch:content id="url" type="text" label="URL" order="2" />" class="b-btn b-btn--<perch:content id="type" options="disabled, border, theme, alt, positive" type="select" label="Type" order="1" /><perch:if id="large" value="Yes" match="eq"> b-btn--large</perch:if> <perch:if id="margin" value="Yes" match="eq"> b-btn--margin</perch:if>">
+							<perch:content id="label" type="text" label="Label" order="3" />
+						</a>
+					<perch:else />
+						<span class="b-btn b-btn--<perch:content id="type" />">
+							<perch:content id="label" />
+						</span>
+					</perch:if>
+
+					<perch:content id="large" type="checkbox" order="4" label="Large" value="Yes" suppress="true" />
+					<perch:content id="margin" type="checkbox" order="5" label="Margin" value="Yes" suppress="true" />
+
+				</perch:block>
+
+				<perch:block type="footnote" label="Footnote">
+					<div class="p-page__footnote">
+						<perch:template path="content/text_block.html" />
+					</div>
+				</perch:block>
+
+				<perch:block type="quote" label="Quote">
+					<perch:template path="content/quote.html" />
+				</perch:block>
+
+				<perch:block type="faq" label="FAQ">
+					<perch:repeater id="faqs" label="Q&A">
+						<perch:before><ul class="b-nav p-page__faq"></perch:before>
+							<li>
+								<b><perch:content id="question" label="Question" /></b>
+								<perch:template path="content/text_block.html" />
+							</li>
+						<perch:after></ul></perch:after>
+					</perch:repeater>
+				</perch:block>
+
+				<perch:block type="newsletter" label="Newsletter">
+					<!-- Begin MailChimp Signup Form -->
+						<div id="mc_embed_signup">
+
+							<form action="//dotyork.us3.list-manage.com/subscribe/post?u=a12578ad4e02415ccc40d4c6d&amp;id=47990ca15e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate b-form p-page__newsletter" target="_blank" novalidate>
+							    <div id="mc_embed_signup_scroll">
+									<h3>Get Updates</h3>
+									<div class="mc-field-group">
+										<label for="mce-EMAIL" class="b-form__label" hidden>Email</label>
+										<input type="email" value="" name="EMAIL" class="required email har-form__input" id="mce-EMAIL" placeholder="you@domain.com" />
+										<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button b-btn b-btn b-btn--positive b-form__btn">
+									</div>
+
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>
+
+								    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a12578ad4e02415ccc40d4c6d_4d3eae5c3c" tabindex="-1" value=""></div>
+									
+									<p>Unsubscribe any time. No spam. Ever.</p>
+								    
+							    </div>
+							</form>
+						</div>
+					<!--End mc_embed_signup-->
+				</perch:block>
+			</perch:blocks>
+		</div>
+
+	</div>

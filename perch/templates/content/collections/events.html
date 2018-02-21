@@ -1,0 +1,37 @@
+<perch:content id="title" type="text" title="true" label="Title" />
+<perch:content id="slug" type="slug" for="title" />
+
+<perch:content id="date" type="date" label="Date" /> 
+
+<perch:content id="venue_title" type="text" label="Venue Title" />
+<perch:content id="venue_postcode" type="text" label="Venue URL" help="or map" />
+
+<perch:content id="url_photo" type="text" label="Photo URL" divider-before="Media" size="l" />
+<perch:content id="url_video" type="text" label="Video URL" size="l" />
+
+<perch:content id="intro" type="text" size="xl" label="Intro" />
+
+<perch:content id="outro" type="text" size="xl" label="Outro" help="For Archive" default="This is an archive of a DotYork event. Thanks to all speakers, sponsors and attendees for making it happen. See you soon." />
+
+<perch:content id="tweet" type="textarea" size="s" label="Tweet Embed" html="True" />
+
+<perch:related divider-before="Speakers" id="speakers" label="Speakers" collection="Speakers" size="l" />
+	<perch:content id="slug" />
+</perch:related>
+
+<perch:related divider-before="Sponsors" id="sponsors_gold" label="Gold Sponsors" collection="Sponsors" size="m" />
+	<perch:content id="title" />
+</perch:related>
+<perch:related id="sponsors_silver" label="Silver Sponsors" collection="Sponsors" size="l" />
+	<perch:content id="title" />
+</perch:related>
+<perch:related id="sponsors_bronze" label="Bronze Sponsors" collection="Sponsors" size="xl" />
+	<perch:content id="title" />
+</perch:related>
+
+<perch:content id="btn_url1" type="text" label="URL" divider-before="Button" />
+<perch:content id="btn_text1" type="text" label="Text" />
+
+<perch:content id="ticket_link" type="text" label="Ticket URL" />
+
+<perch:content id="hide_details" type="checkbox" value="true" label="Hide Details" />

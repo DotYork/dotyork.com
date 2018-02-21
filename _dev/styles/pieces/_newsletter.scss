@@ -1,0 +1,118 @@
+//	Newsletter
+//  ==========
+
+
+//	Container
+
+//	Title
+
+//	Form
+//		Label
+//		Email
+//		Button
+//		Hint
+
+
+
+
+
+//------------------------------------//
+//  Container
+//------------------------------------//
+
+.p-newsletter {
+	padding: 60px 20px;
+	background: $color-green;
+	color: white;
+	text-align: center;
+}
+
+
+
+
+
+//------------------------------------//
+//  Title
+//------------------------------------//
+
+.p-newsletter__title {
+	margin-bottom: 25px;
+}
+
+
+
+
+
+//------------------------------------//
+//  Form
+//------------------------------------//
+
+.p-newsletter__form {
+
+}
+
+
+
+	//
+	//	Label
+	//
+
+	.p-newsletter__form__label {
+		display: none;
+	}
+
+
+
+	//
+	//	Email
+	//
+
+	.p-newsletter__form-field__email {
+		width: 380px;
+		padding: 0 30px;
+		
+		border-radius: 30px 0 0 30px;
+
+		font-family: $alt-font-family;
+
+		@include mq(650px, max) {
+			width: 100%;
+			margin-bottom: 20px;
+			border-radius: 30px;
+			text-align: center;
+		}
+	}
+
+
+
+	//
+	//	Button
+	//
+
+	.p-newsletter__form-field__btn {
+		height: 60px;
+		
+		margin-left: -5px;
+		border-radius: 0 30px 30px 0;
+
+		@include mq(650px, max) {
+			width: 100%;
+			margin-left: 0;
+			border-radius: 30px;
+		}
+	}
+
+
+
+	//
+	//	Hint
+	//
+
+	.p-newsletter__form__hint {
+		margin-top: 25px;
+		color: white;
+	}
+
+
+
+

@@ -1,0 +1,8 @@
+<h1 class="t-xxl t-weight-bold">
+	<perch:content id="heading" type="textarea" label="Heading" html="true" />
+</h1>
+<p class="t-l"><perch:content id="subheading" label="Subheading" size="l" /></p>
+
+<perch:if exists="btn_url">
+	<a href="<perch:content id="btn_url" label="Button Url" />" class="b-btn b-btn--positive" ><perch:content id="btn_text" type="text" label="Button Text" /></a>
+</perch:if>

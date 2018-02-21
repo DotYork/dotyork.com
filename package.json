@@ -1,0 +1,21 @@
+{
+  "name": "dotyork",
+  "version": "4.0.0",
+  "description": "Copyright 2017 Rick Chadwick",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-header": "",
+    "gulp-notify": "",
+    "gulp-sass": "",
+    "gulp-concat": "",
+    "gulp-uglify": "",
+    "jshint": "",
+    "gulp-jshint": ""
+  },
+  "author": {
+    "email": "rick@rickchadwick.co.uk",
+    "name": "rickary"
+  }
+}

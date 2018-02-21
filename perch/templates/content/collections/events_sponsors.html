@@ -1,0 +1,30 @@
+<section id="partners" class="p-partners p-section">
+		<div class="b-container">
+			<h2 class="t-s p-section__title is-center is-purple">Event Sponsors</h2>
+
+<div class="p-partner--gold">
+	<perch:related id="sponsors_gold" collection="Sponsors"/>
+		<perch:template path="content/collections/sponsors_list.html" />
+
+		<perch:if exists="about">
+			<div>
+				<perch:content id="about" markdown="true" />
+			</div>
+		</perch:if>
+	</perch:related>
+</div>
+
+<div class="p-partner--silver">
+	<perch:related id="sponsors_silver" collection="Sponsors"/>
+		<perch:template path="content/collections/sponsors_list.html" />
+	</perch:related>
+</div>
+
+<div class="p-partner--bronze">
+	<perch:related id="sponsors_bronze" collection="Sponsors"/>
+		<perch:template path="content/collections/sponsors_list.html" />
+	</perch:related>
+</div>
+
+	</div>
+</section>

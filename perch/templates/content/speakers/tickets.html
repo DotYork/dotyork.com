@@ -1,0 +1,27 @@
+<aside class="p-section is-blue p-talk__tickets">
+	<h3 class="t-s p-section__title is-yellow is-center">Tickets</h3>
+
+	<p class="t-xl t-weight-bold p-talk__tickets__name">
+		See <perch:content id="first_name" />  <perch:content id="last_name" /> 
+		<perch:related id="event" collection="Events">
+			at <perch:content id="title" />!
+		</perch:related>
+	</p>
+
+	<p class="t-l p-talk__tickets__date">
+		<perch:related id="event" collection="Events">
+			<perch:content id="date" format="jS F Y" /> 
+		</perch:related>
+	</p>
+
+	<p>Use the link below for <perch:if exists="discount_code">discounted </perch:if>tickets.</p>
+
+
+	<perch:if exists="discount_code">
+		<a href="<perch:content id="discount_code" />" class="b-btn b-btn--theme">Get Tickets</a>
+	<perch:else />
+		<perch:related id="event" collection="Events">
+			<a href="<perch:content id="ticket_link" />" class="b-btn b-btn--theme">Get Tickets</a>	
+		</perch:related>
+	</perch:if>
+</aside>

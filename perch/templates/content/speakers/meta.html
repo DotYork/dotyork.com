@@ -1,0 +1,44 @@
+<meta name="description" content="<perch:content id="talk" /> by <perch:content id="first_name" /> <perch:content id="last_name" /> at<perch:related id="event" collection="Events"> <perch:content id="title" /> on <perch:content id="date" format="jS F Y" /> </perch:related>" />
+
+<perch:if exists="keywords">
+	<meta name="keywords" content="<perch:content id="social_keywords" label="Keywords" type="textarea" size="xs" escape="true" help="Separate with commas" count="chars" />" />
+</perch:if>
+
+<meta property="og:site_name" content="DotYork" />
+<meta name="og:title" content="<perch:content id="talk" />" />
+<meta name="og:url" content="http://dotyork.com/speakers/<perch:content id="slug" />" />
+<meta name="og:description" content="<perch:content id="talk" /> by <perch:content id="first_name" /> <perch:content id="last_name" /> at<perch:related id="event" collection="Events"> <perch:content id="title" /> on <perch:content id="date" format="jS F Y" /> </perch:related>" />
+
+
+
+<meta name="twitter:site" content="@dot_york" />
+<meta name="twitter:title" content="<perch:content id="talk" />" />
+
+
+
+<meta name="twitter:description" content="<perch:content id="talk" /> by <perch:content id="first_name" /> <perch:content id="last_name" /> at<perch:related id="event" collection="Events"> <perch:content id="title" /> on <perch:content id="date" format="jS F Y" /> </perch:related>" />
+
+<meta name="twitter:url" content="https://dotyork.com/speakers/<perch:content id="slug" />" />
+
+<perch:if exists="talk_video">
+	<meta name="twitter:card" content="player" />
+
+	<perch:if id="talk_format" match="eq" value="vimeo">
+		<meta name="twitter:player" content="https://vimeo.com/<perch:content id="talk_video" />" />
+	</perch:if>
+
+	<perch:if id="talk_format" match="eq" value="youtube">
+		<meta name="twitter:player" content="https://www.youtube.com/watch?v=<perch:content id="talk_video" />" />
+	</perch:if>
+</perch:if>
+
+
+
+<perch:if exists="social_image">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://dotyork.com/<perch:content id="social_image" type="image" />" />
+	<meta name="og:image" content="https://dotyork.com/<perch:content id="social_image" type="image" />" />
+</perch:if>
+
+
+

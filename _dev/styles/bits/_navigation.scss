@@ -1,0 +1,82 @@
+//  Navigation
+//  ==========
+
+
+
+//  Navigation                  horizontal
+//      Banner-Nav              horizontally centred
+//      Stacked-Nav             vertical
+
+
+
+
+
+//------------------------------------//
+//  Config
+//------------------------------------//
+
+$use-nav     : true !default;
+
+
+
+
+
+//------------------------------------//
+//  Code
+//------------------------------------//
+
+@if $use-nav == true{
+
+
+    //------------------------------------//
+    //  Navigation
+    //------------------------------------//
+
+    .b-nav{
+        list-style:none;
+        margin-left:0;
+
+        > li{
+
+            display: inline;
+
+            &,
+            > a{
+                display:inline-block;
+               *display:inline;
+                zoom:1;
+            }
+        }
+    }
+
+
+
+    //
+    //  Banner-Nav
+    //
+
+    .b-nav--banner {
+        text-align: center;
+    }
+
+
+
+    //
+    //  Stacked-Nav
+    //
+
+    .b-nav--stacked{
+
+        > li{
+            display:list-item;
+
+            > a{
+                display:block;
+            }
+        }
+    }
+
+}
+
+
+

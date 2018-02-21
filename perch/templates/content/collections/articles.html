@@ -1,0 +1,103 @@
+<perch:content id="title" title="true" label="Title" size="xl" />
+<perch:content id="slug" type="slug" for="title" />
+
+<perch:content id="date" type="date" label="Date" format="Y-M-D" required="true" />
+
+<perch:related id="author" collection="Authors" label="Author" size="m">
+	<perch:content id="slug" type="slug" />
+</perch:related>
+
+<perch:content id="excerpt" type="textarea" markdown="true" editor="simplemde" label="About" size="s" />
+
+<perch:content id="image" type="image" label="Image" />
+<perch:content id="image" type="image" label="Image" width="300" height="300" density="1.5" />
+<perch:content id="image" type="image" label="Image" width="100" height="100" />
+<perch:content id="image_alt" type="text" label="Alt" />
+
+<perch:blocks>
+	<perch:block type="text" label="Text">
+		<perch:template path="content/text_block.html" />
+	</perch:block>
+
+	<perch:block type="image" label="Image">
+		<perch:template path="content/image.html" />
+	</perch:block>
+
+	<perch:block type="button" label="Button">
+		
+		<perch:if id="type" match="neq" value="disabled">
+			<a href="<perch:content id="url" type="text" label="URL" order="2" />" class="b-btn b-btn--<perch:content id="type" options="disabled, border, theme, alt, positive" type="select" label="Type" order="1" /><perch:if id="large" value="Yes" match="eq"> b-btn--large</perch:if> <perch:if id="margin" value="Yes" match="eq"> b-btn--margin</perch:if>">
+				<perch:content id="label" type="text" label="Label" order="3" />
+			</a>
+		<perch:else />
+			<span class="b-btn b-btn--<perch:content id="type" />">
+				<perch:content id="label" />
+			</span>
+		</perch:if>
+
+		<perch:content id="large" type="checkbox" order="4" label="Large" value="Yes" suppress="true" />
+		<perch:content id="margin" type="checkbox" order="5" label="Margin" value="Yes" suppress="true" />
+
+	</perch:block>
+
+	<perch:block type="footnote" label="Footnote">
+		<div class="p-page__footnote">
+			<perch:template path="content/text_block.html" />
+		</div>
+	</perch:block>
+
+	<perch:block type="quote" label="Quote">
+		<perch:template path="content/quote.html" />
+	</perch:block>
+
+	<perch:block type="faq" label="FAQ">
+		<perch:repeater id="faqs" label="Q&A">
+			<perch:before><ul class="b-nav p-page__faq"></perch:before>
+				<li>
+					<b><perch:content id="question" label="Question" /></b>
+					<perch:template path="content/text_block.html" />
+				</li>
+			<perch:after></ul></perch:after>
+		</perch:repeater>
+	</perch:block>
+
+	<perch:block type="newsletter" label="Newsletter">
+		<!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup">
+				<form action="//dotyork.us3.list-manage.com/subscribe/post?u=a12578ad4e02415ccc40d4c6d&amp;id=47990ca15e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate har-form har-form--in-content" target="_blank" novalidate>
+				    <div id="mc_embed_signup_scroll">
+					
+						<div class="mc-field-group">
+							<label for="mce-EMAIL" class="har-form__label" hidden>Email</label>
+							<input type="email" value="" name="EMAIL" class="required email har-form__input" id="mce-EMAIL" placeholder="you@domain.com" />
+							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button b-btn har-btn har-btn--fill har-form__btn">
+						</div>
+
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+
+					    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a12578ad4e02415ccc40d4c6d_4d3eae5c3c" tabindex="-1" value=""></div>
+
+					    
+				    </div>
+				</form>
+			</div>
+		<!--End mc_embed_signup-->
+	</perch:block>
+
+	<perch:block type="video" label="Video">
+		<div class="b-embed b-embed--video p-talk__embed">
+			<iframe src="https://www.youtube.com/embed/<perch:content id="video_code" type="text" label="Video Code" />" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</perch:block>
+
+
+	
+</perch:blocks>
+
+<perch:related id="related" collection="Articles" label="Related" divider-before="Meta">
+	<perch:content id="slug" type="slug" />
+	<perch:content id="image" type="image" width="100" height="100" />
+</perch:related>

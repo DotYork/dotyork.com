@@ -1,0 +1,42 @@
+<h2 class="t-s p-section__title is-<perch:content id="heading_colour" type="select" options="white, yellow, purple" label="Heading Colour" />">
+	<perch:content id="heading" label="Heading" />
+</h2>
+
+<perch:blocks>
+	<perch:block type="text" label="Text">
+		<perch:template path="content/text_block.html" />
+	</perch:block>
+
+	<perch:block type="large_text" label="Larger Text">
+		<p class="t-l"><perch:content id="large" label="Large Text" /></p>
+	</perch:block>
+
+	<perch:block type="largest_text" label="Largest Text">
+		<p class="t-xl t-weight-bold"><perch:content id="largest" label="Largest Text" /></p>
+	</perch:block>
+
+	<perch:block type="ticket" label="Ticket">
+		<p class="t-l"><perch:content id="ticket" label="Ticket Name" /> <strong><perch:content id="price" label="Price" /></strong></p>
+	</perch:block>
+
+	<perch:block type="image" label="Read More">
+		<a href="<perch:content id="url" label="URL" />" class="p-page__read-more">Read More</a>
+	</perch:block>
+
+	<perch:block type="button" label="Button">
+		
+		<perch:if id="type" match="neq" value="disabled">
+			<a href="<perch:content id="url" type="text" label="URL" order="2" />" class="b-btn b-btn--<perch:content id="type" options="disabled, border, theme, alt, positive" type="select" label="Type" order="1" /><perch:if id="large" value="Yes" match="eq"> b-btn--large</perch:if> <perch:if id="margin" value="Yes" match="eq"> b-btn--margin</perch:if>">
+				<perch:content id="label" type="text" label="Label" order="3" />
+			</a>
+		<perch:else />
+			<span class="b-btn b-btn--<perch:content id="type" />">
+				<perch:content id="label" />
+			</span>
+		</perch:if>
+
+		<perch:content id="large" type="checkbox" order="4" label="Large" value="Yes" suppress="true" />
+		<perch:content id="margin" type="checkbox" order="5" label="Margin" value="Yes" suppress="true" />
+
+	</perch:block>
+</perch:blocks>

@@ -1,0 +1,12 @@
+<meta name="description" content="<perch:content id="excerpt" html="true" striptags="true" />" />
+
+<meta property="og:site_name" content="DotYork" />
+<meta name="og:title" content="<perch:content id="title" />" />
+<meta name="og:url" content="http://dotyork.com/blog/<perch:content id="slug" />" />
+<meta name="og:description" content="<perch:content id="excerpt" html="true" striptags="true" />" />
+
+<perch:if exists="image">
+	<meta name="og:image" content="https://dotyork.com/<perch:content id="image" type="image" />" />
+<perch:else />
+	<meta property="og:image" content="http://dotyork.com/assets/img/social.jpg" />
+</perch:if>

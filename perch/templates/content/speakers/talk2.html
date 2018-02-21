@@ -1,0 +1,49 @@
+<perch:if exists="talk2">
+	<section class="p-section p-talk p-talk--two">
+	 	<div class="b-container b-container--small">
+
+			<h2 class="t-s p-section__title is-purple p-talk__title"><perch:content id="talk2" /></h2>
+
+
+			<perch:if exists="talk2_video">
+				<div class="b-embed b-embed--video p-talk__embed">
+					<perch:if id="talk2_format" match="eq" value="vimeo">
+						<iframe src='https://player.vimeo.com/video/<perch:content id="talk2_video" />' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					</perch:if>
+
+					<perch:if id="talk2_format" match="eq" value="youtube">
+						<iframe src="https://www.youtube.com/embed/<perch:content id="talk2_video" />" frameborder="0" allowfullscreen></iframe>
+					</perch:if>
+				</div>
+			</perch:if>
+
+			<p class="t-s p-talk__meta">
+				<perch:if exists="talk2_duration">
+					<span class="b-icon icon--clock"><perch:content id="talk2_duration" /></span>
+					<perch:if exists="transcript">
+						| <a href="<perch:content id="transcript" />">View Transcript</a>
+					</perch:if>
+
+					<perch:related id="event2" collection="Events">
+						| Filmed on <perch:content id="date" format="jS F Y" /> 
+							at
+						<a href="/<perch:content id="date" format="Y" />"><perch:content id="title" /></a>
+					</perch:related>
+
+				<perch:else />
+					<perch:related id="event2" collection="Events">
+						<perch:content id="date" format="jS F Y" /> at <a href="/<perch:content id="date" format="Y" />"><perch:content id="title" /></a>
+					</perch:related>
+				</perch:if>
+			</p>
+
+			<div class="p-talk__desc">
+				<perch:content id="talk2_desc" type="textarea" label="About" markdown="true" editor="markitup" size="s" />
+			</div>
+		</div>
+	</section>
+</perch:if>
+
+	
+
+	

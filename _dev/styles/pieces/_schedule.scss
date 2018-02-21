@@ -1,0 +1,88 @@
+.p-schedule {
+	padding: 30px;
+}
+
+.p-schedule__list {
+	list-style: none;
+}
+
+.p-schedule__item {
+	padding: 30px 0;
+	border-bottom: solid 1px $color-neutral;
+
+	p {
+		font-size: 14px;
+		margin-top: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.p-schedule__title {
+	color: $color-purple;
+}
+
+	.p-schedule__time {
+		display: inline-block;
+		width: 100px;
+
+		font-weight: $font-weight-bold;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-size: 13px;
+		vertical-align: middle;
+
+		@include mq(600px, max) {
+			display: block;
+		}
+	}
+
+
+.p-schedule__location {
+	background: $color-blue url('/assets/img/bg.png') top center no-repeat;
+	background-size: 900px;
+
+	address {
+		color: white;
+	}
+}
+
+	.p-schedule__location__info {
+		padding: 50px;
+	}
+
+
+.p-schedule__evening {
+	padding: 50px;
+	background: $color-green url('/assets/img/bg.png') center center no-repeat;
+	background-size: 900px;
+
+	color: white;
+
+	p {
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+.p-schedule__tickets {
+
+}
+
+.p-schedule__tickets {
+	padding: 100px 20px;
+	text-align: center;
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	.t-l {
+		color: $color-yellow;
+	}
+}

@@ -1,0 +1,19 @@
+<div class="p-schedule__location">
+
+	<div class="p-schedule__location__info">
+		<h3 class="p-section__title t-s is-yellow">Location</h3>
+
+		<address>
+			<perch:content id="name" label="Name" type="text" /><br />
+			<perch:content id="street" label="Street" type="text" />,<br />
+			York <br />
+			<perch:content id="postcode" label="Postcode" type="text" />
+
+			<a href="https://www.google.co.uk/maps/place/<perch:content id="postcode" />" class="p-page__read-more is-yellow" target="_blank">Read More</a>
+		</address>
+	</div>
+
+	<div class="b-embed b-embed--maps">
+		<perch:content id="map" label="Map" html="true" type="textarea" size="s" />
+	</div>
+</div>

@@ -1,0 +1,10 @@
+# Perch Runway
+RewriteEngine On
+
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{SERVER_NAME}/%$1 [R,L]
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_URI} !^/perch 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* /perch/core/runway/start.php [L] 

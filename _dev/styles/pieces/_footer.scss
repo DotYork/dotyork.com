@@ -1,0 +1,254 @@
+//	Footer
+//  ======
+
+
+//	Container 					-- 	the whole thing
+
+//	Bottom 						--	the section at the end with the social links, nav & credits
+//		Social List
+//		Nav
+//		Credits
+
+//	Credits						--	brought to you by
+//		List
+//		Logo
+//			Isotoma
+//			Bytemark
+
+//	Partners
+
+//	Next Event
+
+
+
+
+
+//------------------------------------//
+//  Container
+//------------------------------------//
+
+.p-footer__container {
+
+}
+
+
+
+
+
+//------------------------------------//
+//  Bottom
+//------------------------------------//
+
+.p-footer {
+	padding: 40px 20px;
+	text-align: center;
+	background: $color-yellow;
+	color: black;
+
+	a {
+		color: black;
+		border-color: $color-yellow;
+	}
+}
+
+
+
+	//
+	//	Social List
+	//
+
+	.p-footer__social {
+		margin-bottom: 40px;
+
+		li {
+			margin: 0 5px;
+		}
+
+		@include mq(500px) {
+
+			li {
+				margin: 0 10px;
+			}
+		}
+	}
+
+
+
+	//
+	//	Nav
+	//
+
+	.p-footer__nav {
+		margin-bottom: 20px;
+
+		li {
+
+			&:after {
+				display: inline;
+				content: "|";
+				padding: 0 10px;
+			}
+
+			&:last-child:after {
+				display: none;
+			}
+		}
+
+		a {
+			border-bottom: solid 1px $color-yellow;
+
+			&:hover {
+				border-color: black;
+			}
+		}
+	}
+
+
+
+	//
+	//	Copy
+	//
+
+	.p-footer__copy {
+		@include mq(500px, max) {
+			span { display: block; }
+		}
+	}
+
+
+
+
+
+//------------------------------------//
+//  Credits
+//------------------------------------//
+
+.p-footer-credits {
+	padding: 40px 20px;
+	background: $color-purple;
+	text-align: center;
+}
+
+
+
+	//
+	//	List
+	//
+
+	.p-footer-credits__list {
+		margin-top: 40px;
+	}
+
+
+
+	//
+	//	Logo
+	//
+
+	.p-footer-credits__logo {
+		display: block;
+
+		width: 166px;
+		height: 50px;
+
+		background-size: 100%;
+
+		text-indent: -999em;
+
+	}
+
+
+		//	Isotoma
+
+		.p-footer-credits__logo--isotoma {
+			background-image: url('/assets/img/logo--isotoma.png');
+		}
+
+
+		//	Bytemark
+
+		.p-footer-credits__logo--bytemark {
+			background-image: url('/assets/img/logo--bytemark.png');
+		}
+
+
+
+
+
+//------------------------------------//
+//  Partners
+//------------------------------------//
+
+.p-footer__partners {
+	padding: 60px 20px;
+	background: white;
+	text-align: center;
+
+	li {
+		margin: 0 15px;
+		vertical-align: middle;
+	}
+
+	img {
+		width: 150px;
+
+		@include mq($bp-tablet) {
+			width: 180px;
+		}
+	}
+}
+
+
+
+
+
+//------------------------------------//
+//  Next Event
+//------------------------------------//
+
+.p-footer__next-event {
+	padding: 10px;
+	background: $color-yellow;
+	color: white;
+	text-align: center;
+
+	a {
+		display: block;
+		text-decoration: none;
+		color: $color-dark;
+	}
+
+	b {
+		text-transform: uppercase;
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+
+	@include mq(650px, max) {
+		b {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+
+
+	span.p-footer__next-event__arrow {
+		display: none;
+
+		@include mq(450px) {
+			display: inline-block;
+			height: 12px;
+			width: 23px;
+
+			margin-left: 10px;
+
+			vertical-align: middle;
+		}
+	}
+
+
+
+
+

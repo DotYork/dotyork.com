@@ -1,0 +1,7 @@
+.DS_Store
+.sass-cache
+node_modules
+perch/config/config.php
+perch/config/config.production.php
+perch/config/config.local-dotyork-com.php
+perch/resources

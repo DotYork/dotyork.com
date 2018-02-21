@@ -1,0 +1,7 @@
+<div class="p-footer__next-event">
+	<perch:if exists="btn_url1">
+		<a href="<perch:content id="btn_url1" />"><b class="t-xs">Next Event:</b> <perch:content id="title" /> - <perch:content id="date" format="D jS M 'y" /> <span class="p-page__read-more p-footer__next-event__arrow">Find Out More</span></a>
+	<perch:else />
+		<b class="t-xs">Next Event: </b> <perch:content id="title" /> - <perch:content id="date" format="D jS M 'y" />
+	</perch:if>
+</div>

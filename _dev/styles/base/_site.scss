@@ -1,0 +1,28 @@
+//	Variables
+//  =========
+
+//  For:
+//  HTML & Body
+
+
+
+
+
+html {
+	font-size: 100%;
+}
+
+
+
+body {
+	@include text-rendering;
+	@include text-size-adjust;
+	@include font-size($font-size);
+
+	background: $color-body;
+	color: $color-text;
+
+	font-family: $font-family;
+	font-weight: $font-weight;
+	line-height: $line-height;
+}

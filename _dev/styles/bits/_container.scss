@@ -1,0 +1,68 @@
+//------------------------------------//
+//  Container
+//------------------------------------//
+
+.b-container {
+	width: 100%;
+	max-width: $bp-max;
+	margin: 0 auto;
+	padding: 0 $gutter;
+}
+
+.b-container--smaller {
+	width: 100%;
+	max-width: $bp-desktop;
+}
+
+.b-container--small {
+	width: 100%;
+	max-width: $bp-tablet;
+}
+
+.b-main {
+	@include grid-basic(7);
+	margin-left: 0;
+
+	@include mq($bp-tablet, max) {
+		width: 100%;
+		float: none;
+		@extend %clearfix;
+		display: block;
+	}
+}
+
+.b-aside {
+	@include grid-basic(5);
+	float: right;
+
+	@include mq($bp-tablet, max) {
+		display: block;
+		width: 100%;
+		float: none;
+		margin-top: 40px;
+		margin-left: 0;
+		clear: both;
+		@extend %clearfix;
+	}
+}
+
+
+.b-half {
+	@include grid-flush(6);
+
+	@include mq($bp-tablet, max) {
+		width: 100%;
+		clear: left;
+		margin-left: 0;
+	}
+}
+
+.b-half__inner {
+	max-width: 400px;
+	margin: 100px auto;
+	padding: 0 20px;
+
+	@include mq($bp-desktop, max) {
+		margin: 60px auto;
+	}
+}

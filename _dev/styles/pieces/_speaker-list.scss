@@ -1,0 +1,62 @@
+// .p-speakers {
+
+// }
+
+// .p-speaker-list {
+// }
+
+// .p-speaker-in-list {
+// 	padding: 0 20px;
+// 	width: 24%;
+// 	vertical-align: top;
+
+// 	display: inline-block;
+// 	margin-top: 50px;
+
+// 	@include mq($bp-tablet, max) {
+// 		width: 32%;
+		
+// 	}
+
+// 	@include mq(600px, max) {
+// 		width: 45%;
+// 		padding: 0 10px;
+// 	}
+
+// 	@include mq(400px, max) {
+// 		padding: 0 5px;
+// 	}
+// }
+
+// .p-speaker-in-list__photo {
+// 	margin-bottom: 20px;
+// 	border-radius: 100%;
+// 	max-width: 200px;
+// 	height: auto;
+
+// 	@include mq($bp-tablet, max) {
+// 		margin-bottom: 5px;
+// 	}
+// 	border: solid 3px transparent;
+
+// 	&:hover {
+// 		border-color: $color-yellow;
+// 	}
+// }
+
+// .p-speaker-in-list__name {
+// 	color: $color-yellow;
+// 	font-weight: $font-weight-bold;
+
+// 	@include mq(400px, max) {
+// 		@include font-size(14);
+// 	}
+// }
+
+// .p-speaker-in-list__title {
+// 	color: white;
+
+// 	@include mq($bp-tablet, max) {
+// 		@include font-size(12);
+// 	}
+// }

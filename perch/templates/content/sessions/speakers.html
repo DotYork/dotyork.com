@@ -1,0 +1,25 @@
+<perch:related id="speakers" collection="Speakers" label="Speakers" size="m">
+
+<perch:before>
+	<section id="speakers" class="p-speakers p-section is-green">
+		<div class="b-container">
+			<h2 class="t-s p-section__title is-center is-white">Speakers</h2>
+			<ul class="b-nav b-nav--banner p-speaker-list">
+</perch:before>
+
+	<li class="p-speaker-in-list">
+		<a href="/speakers/<perch:content id="slug" />">
+			<img src="<perch:content id="photo" type="image" />" alt="<perch:content id="first_name" /> <perch:content id="last_name" />" class="p-speaker-in-list__photo" />
+			<h3 class="p-speaker-in-list__name"><perch:content id="first_name" /> <perch:content id="last_name" /></h3>
+
+			<p class="p-speaker-in-list__title"><perch:content id="talk" /></p>
+		</a>
+	</li>
+
+<perch:after>
+			</div>
+		</ul>
+	</section>
+</perch:after>
+	
+</perch:related>
