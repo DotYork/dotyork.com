@@ -27,8 +27,8 @@
 
 	//	Talk
 
-	  perch_collection('Speakers', [
-	      'filter'      => 'slug',
+	  perch_collection('Talks', [
+	      'filter'      => 'speaker.slug',
 	      'match'       => 'eq',
 	      'value'       => perch_get("slug"),
 	      'template'    => 'speakers/talk.html'

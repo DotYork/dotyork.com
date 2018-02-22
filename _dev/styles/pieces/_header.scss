@@ -42,6 +42,18 @@ body.blog .p-header {
 }
 
 
+body.speakers .p-header,
+body.videos .p-header {
+	background: $color-green;
+
+	color: white;
+
+	a {
+		color: white;
+	}
+}
+
+
 .p-logo {
 	display: block;
 

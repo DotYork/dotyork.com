@@ -19,6 +19,11 @@
 	border-radius: 100%;
 	margin-right: 30px;
 
+	border: solid 3px $color-yellow;
+
+	@include transition(all 0.1s ease-in-out);
+
+
 	@include mq(767px, max) {
 		width: 150px;
 		height: 150px;

@@ -1,0 +1,24 @@
+<perch:content id="talk" type="text" label="Talk Title" title="true" />
+
+<perch:related id="speaker" collection="Speakers" label="Speaker" size="m">
+	<perch:content id="slug" type="slug" />
+</perch:related>
+
+<perch:related id="event" collection="Events" label="Event" size="m">
+	<perch:content id="slug" type="slug" />
+	<perch:content id="date" type="date" />
+</perch:related>
+
+<perch:content id="pub_date" type="date" label="Published Date" />
+
+<perch:content id="talk_desc" type="textarea" markdown="true" editor="simplemde" size="s" label="Description" />
+<perch:content id="talk_video" type="text" label="Video Code" help="e.g. mRUaBDUxTF0" />
+<perch:content id="talk_duration" type="text" label="Video Duration" size="s" />
+<perch:content id="talk_format" type="select" options="youtube, vimeo" label="Video Source" />
+<perch:content id="talk_notes" type="textarea" markdown="true" editor="simplemde" size="s" label="Notes" />
+
+<perch:repeater id="talk_links" label="Links">
+	<perch:content id="talk_links_type" type="select" label="Type" options="website, twitter, facebook, book, slides, article" />
+    <perch:content id="talk_links_url" type="text" label="URL" />
+    <perch:content id="talk_links_text" type="text" label="Text" />
+</perch:repeater>

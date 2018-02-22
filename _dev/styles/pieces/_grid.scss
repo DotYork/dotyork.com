@@ -144,6 +144,32 @@ body.blog .p-grid {
 //  Video Variant
 //------------------------------------//
 
+.p-grid--videos {
+	.p-grid-item__title {
+		display: inline-block;
+		margin-bottom: .25em;
+
+		color: $color-green;
+		border-bottom: solid 2px transparent;
+	}
+
+
+	.p-grid-item__desc {
+		display: block;
+		margin-bottom: 20px;
+		color: $color-text;
+	}
+
+	a:hover {
+		.p-grid-item__title		{ border-color: $color-purple; color: $color-purple; }
+		.p-grid-item__read-more { background-position: 0 -30px; }
+	}
+
+	.p-grid-item { 
+		margin-top: 50px;
+	}
+}
+
 
 
 

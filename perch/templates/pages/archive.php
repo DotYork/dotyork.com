@@ -38,16 +38,15 @@
         <div class="b-container">
           <h2 class="t-s p-section__title is-center is-white">Speakers</h2>
       <?php
-      PerchSystem::set_var('show-talk', 'true');
-      perch_collection('Speakers', [
+      PerchSystem::set_var('show-talk', 'true');  //  adds the talk title
+      perch_collection('Talks', [
           'filter'      => 'event.date',
           'match'       => 'eqbetween',
           'value'       => $year_from . ' ,' . $year_to,
-          'sort'        => 'last_name',
+          'sort'        => 'speaker.last_name',
           'sort-order'  => 'ASC',
-          'template'    => 'speakers/grid.html'
+          'template'    => 'talks/speaker-grid.html'
       ]);
-
       ?>
     </div>
   </section>
