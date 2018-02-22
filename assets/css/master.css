@@ -1480,6 +1480,64 @@ body.blog .p-grid {
     .p-hero__form {
       margin-top: 200px; } }
 
+.p-about {
+  position: relative;
+  background-size: 900px;
+  color: white;
+  overflow: hidden; }
+
+.p-about.is-blue {
+  background: #10ace1 url("/assets/img/bg.png") bottom center no-repeat; }
+
+.p-about.is-green {
+  background: #07a789 url("/assets/img/bg.png") bottom center no-repeat; }
+
+.p-about.is-purple {
+  background: #51328a url("/assets/img/bg.png") bottom center no-repeat; }
+
+.p-about__body h2 {
+  margin-bottom: 20px;
+  line-height: 1; }
+
+.p-about__body p {
+  margin-bottom: 30px; }
+
+.p-about.is-image-left .p-about__body {
+  float: right; }
+
+.p-about.is-image-right .p-about__body {
+  float: left; }
+
+.p-about__image {
+  display: none; }
+  .lt-ie9 .p-about__image {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8; }
+  @media screen and (min-width: 767px) {
+    .p-about__image {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 50%;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.8; } }
+
+.p-about.is-image-left .p-about__image {
+  left: 0;
+  background-position: center bottom; }
+
+.p-about.is-image-right .p-about__image {
+  right: 0;
+  background-position: center bottom; }
+
 p.p-event-archive__meta {
   margin-bottom: 20px;
   color: #ffed00; }
@@ -2026,37 +2084,6 @@ p.p-talk__tickets__date {
     color: white; }
     .p-home__tickets p strong {
       color: #ffed00; }
-
-.p-home__about p {
-  margin-bottom: 30px; }
-
-.p-home__location {
-  position: relative;
-  background: #10ace1 url("/assets/img/bg.png") bottom center no-repeat;
-  background-size: 900px;
-  color: white;
-  overflow: hidden; }
-  .p-home__location .t-xl {
-    margin-bottom: 20px;
-    line-height: 1;
-    color: white; }
-  .p-home__location .p-home__location__image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-    height: 100vh;
-    filter: saturate(0%);
-    opacity: 0.65;
-    background: url("/assets/img/york.jpg") bottom left no-repeat;
-    background-size: cover; }
-    .lt-ie9 .p-home__location .p-home__location__image {
-      display: none; }
-    @media screen and (max-width: 767px) {
-      .p-home__location .p-home__location__image {
-        display: none; } }
-  .p-home__location p {
-    margin-bottom: 30px; }
 
 .p-home__blog {
   padding: 100px 0; }

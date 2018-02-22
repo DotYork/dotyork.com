@@ -1,0 +1,105 @@
+//	About
+//  =====
+
+//	photo & chat (e.g. what is/location)
+
+//	Container	
+//		Colour Variants
+//	Body
+//	Image			
+
+
+
+
+
+//------------------------------------//
+//  Container
+//------------------------------------//
+
+.p-about {
+	position: relative;
+	background-size: 900px;
+	color: white;
+	overflow: hidden;
+}
+
+
+
+	//
+	// Colours
+	//
+
+	.p-about.is-blue 	{ background: $color-blue url('/assets/img/bg.png') bottom center no-repeat;}
+	.p-about.is-green 	{ background: $color-green url('/assets/img/bg.png') bottom center no-repeat;}
+	.p-about.is-purple 	{ background: $color-purple url('/assets/img/bg.png') bottom center no-repeat;}
+
+
+
+
+
+
+//------------------------------------//
+//  Body
+//------------------------------------//
+
+//	This is a CMS text box
+
+.p-about__body {
+	h2 {
+		margin-bottom: 20px;
+		line-height: 1;
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+	.p-about.is-image-left .p-about__body {
+		float: right;
+	}
+
+	.p-about.is-image-right .p-about__body {
+		float: left;
+	}
+
+
+
+
+//------------------------------------//
+//  Image
+//------------------------------------//
+
+.p-about__image {
+	display: none;
+
+	@include mq($bp-tablet) {
+		display: block;
+
+		position: absolute;
+		bottom: 0;
+		
+		width: 50%;
+		height: 100vh;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		opacity: 0.8;
+	}
+}
+
+	.p-about.is-image-left .p-about__image {
+		left: 0;
+		background-position: center bottom;
+	}
+
+	.p-about.is-image-right .p-about__image {
+		right: 0;
+		background-position: center bottom;
+	}
+
+
+
+
+
