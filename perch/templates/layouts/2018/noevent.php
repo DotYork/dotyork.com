@@ -7,8 +7,8 @@
 <?php perch_content('Hero'); ?>
 
 
-<?php perch_layout('partials/blog'); ?>
 
+<?php perch_layout('partials/videos'); ?>
 
 <section id="location" class="p-home__location">
 	<div class="b-half js-equalHeight">
@@ -20,3 +20,4 @@
 	<div class="p-home__location__image"></div>
 </section>
 
+<?php perch_layout('partials/blog'); ?>

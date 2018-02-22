@@ -12,12 +12,21 @@
 
 			<?php 
 				perch_collection('Talks', [
-				  'filter'  	=> 'talk_video',
-				  'match'      	=> 'neq',
-				  'value'		=> '',
 				  'sort'        => 'pub_date',
 				  'sort-order'  => 'DESC',
-				  'template'    => 'talks/video-grid.html'
+				  'template'    => 'talks/video-grid.html',
+				  'filter'=> [
+						[
+							'filter'    => 'pub_date',
+							'match'     => 'lte',
+							'value'     => Date('Y-m-d'),
+						],
+						[
+							'filter'  	=> 'talk_video',
+							'match'      	=> 'neq',
+							'value'		=> '',
+						]
+					]
 				]);
 			 ?>
 		</div>
