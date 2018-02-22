@@ -690,6 +690,14 @@ body.videos .p-header {
       background: url("/assets/img/mark.svg?v=2") no-repeat;
       background-size: 100%; } }
 
+body.home .p-logo {
+  background-image: url("/assets/img/logo--black.svg?v=2"); }
+  .lt-ie9 body.home .p-logo {
+    background-image: url("/assets/img/mark--black.svg?v=2"); }
+  @media screen and (max-width: 599px) {
+    body.home .p-logo {
+      background-image: url("/assets/img/mark--black.svg?v=2"); } }
+
 .p-header__nav {
   float: right; }
   .p-header__nav li {
@@ -711,6 +719,12 @@ body.videos .p-header {
     @media screen and (max-width: 767px) {
       .p-header__nav li {
         line-height: 30px; } }
+
+body.home .p-header__nav li a:hover {
+  border-bottom: solid 2px black; }
+
+body.home .p-header__nav li.is-current a {
+  border-color: black; }
 
 .p-header__nav__trigger {
   display: none; }
