@@ -36,17 +36,17 @@ img, .u-img {
 //	Floats
 //
 
-.u-img--right {
-	float: right;
-	margin-left: $gutter;
-	margin-bottom: $gutter;
-}
+// .u-img--right {
+// 	float: right;
+// 	margin-left: $gutter;
+// 	margin-bottom: $gutter;
+// }
 
-.u-img--left {
-	float: left;
-	margin-right: $gutter;
-	margin-bottom: $gutter;
-}
+// .u-img--left {
+// 	float: left;
+// 	margin-right: $gutter;
+// 	margin-bottom: $gutter;
+// }
 
 
 
@@ -54,13 +54,13 @@ img, .u-img {
 //	Shapes
 //
 
-.u-img--rounded {
-	border-radius: $border-radius;
-}
+// .u-img--rounded {
+// 	border-radius: $border-radius;
+// }
 
-.u-img--circle {
-	border-radius: 100%;
-}
+// .u-img--circle {
+// 	border-radius: 100%;
+// }
 
 
 
@@ -70,8 +70,8 @@ img, .u-img {
 //  Floats
 //------------------------------------//
 
-.u-float--right 	{ float: right;}
-.u-float--left 	{ float: left;}
+// .u-float--right 	{ float: right;}
+// .u-float--left 	{ float: left;}
 
 
 
@@ -85,9 +85,9 @@ img, .u-img {
 //	Alignment
 //
 
-.u-text--left 	{ text-align: left 		!important;}
-.u-text--right 	{ text-align: right 	!important;}
-.u-text--center 	{ text-align: center 	!important;}
+// .u-text--left 	{ text-align: left 		!important;}
+// .u-text--right 	{ text-align: right 	!important;}
+// .u-text--center 	{ text-align: center 	!important;}
 
 
 
@@ -104,11 +104,11 @@ img, .u-img {
 	overflow: hidden;
 }
 
-.u-visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-}
+// .u-visually-hidden {
+// 	position: absolute !important;
+// 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+// 	clip: rect(1px, 1px, 1px, 1px);
+// }
 
 
 

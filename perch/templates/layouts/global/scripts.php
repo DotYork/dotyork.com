@@ -1,3 +1,65 @@
+	<script>
+		registerListener('load', setLazy);
+		registerListener('load', lazyLoad);
+		registerListener('scroll', lazyLoad);
+
+		var lazyBg = [];
+		var lazy = [];
+
+		function setLazy(){
+		    lazyBg = document.getElementsByClassName('js-lazyBg');
+		    lazy = document.getElementsByClassName('js-lazy');
+
+		    console.log('Found ' + lazyBg.length + ' lazyBg images');
+		    console.log('Found ' + lazy.length + ' lazy images');
+		} 
+
+		function lazyLoad(){
+		    for(var i=0; i<lazyBg.length; i++){
+		        if(isInViewport(lazyBg[i])){
+		            if (lazyBg[i].getAttribute('data-src')){
+		                lazyBg[i].style.backgroundImage = lazyBg[i].getAttribute('data-src');
+		                lazyBg[i].removeAttribute('data-src');
+		            }
+		        }
+		    }
+
+		    for(var i=0; i<lazy.length; i++){
+		        if(isInViewport(lazy[i])){
+		            if (lazy[i].getAttribute('data-src')){
+		                lazy[i].src = lazy[i].getAttribute('data-src');
+		                lazy[i].removeAttribute('data-src');
+		            }
+		        }
+		    }
+		    
+		    cleanLazy();
+		}
+
+		function cleanLazy(){
+		    lazyBg = Array.prototype.filter.call(lazyBg, function(l){ return l.getAttribute('data-src');});
+		    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+		}
+
+		function isInViewport(el){
+		    var rect = el.getBoundingClientRect();
+		    
+		    return (
+		        rect.bottom >= 0 && 
+		        rect.right >= 0 && 
+		        rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
+		        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+		     );
+		}
+
+		function registerListener(event, func) {
+		    if (window.addEventListener) {
+		        window.addEventListener(event, func)
+		    } else {
+		        window.attachEvent('on' + event, func)
+		    }
+		}	
+	</script>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -9,7 +71,6 @@
 		ga('send', 'pageview');
 
 	</script>
-
 
 </body>
 

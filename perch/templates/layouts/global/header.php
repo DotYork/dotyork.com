@@ -6,7 +6,7 @@
 	]); 
 ?>
 
-	<header class="p-header js-header">
+	<header class="p-header">
 		<div class="b-container">
 			<a href="/" class="p-logo">DotYork</a>
 

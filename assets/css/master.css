@@ -70,7 +70,6 @@ blockquote:after,
 .b-main:after,
 .lt-ie9 .b-aside:after,
 .b-aside:after,
-.b-media:after,
 .p-event:after {
   content: "";
   display: table;
@@ -80,37 +79,6 @@ img, .u-img {
   max-width: 100%;
   width: 100%; }
 
-.u-img--right {
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 20px; }
-
-.u-img--left {
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 20px; }
-
-.u-img--rounded {
-  border-radius: 4px; }
-
-.u-img--circle {
-  border-radius: 100%; }
-
-.u-float--right {
-  float: right; }
-
-.u-float--left {
-  float: left; }
-
-.u-text--left {
-  text-align: left 		!important; }
-
-.u-text--right {
-  text-align: right 	!important; }
-
-.u-text--center {
-  text-align: center 	!important; }
-
 .u-hide-text {
   display: inline-block;
   zoom: 1;
@@ -118,12 +86,6 @@ img, .u-img {
   text-indent: -999em;
   white-space: nowrap;
   overflow: hidden; }
-
-.u-visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px); }
 
 html {
   font-size: 100%; }
@@ -405,30 +367,6 @@ select, textarea, input {
   @media screen and (max-width: 1023px) {
     .b-half__inner {
       margin: 60px auto; } }
-
-.b-media {
-  display: block; }
-
-.b-media__img,
-.b-media__object {
-  float: left;
-  margin-right: 20px; }
-
-.b-media__img--rev,
-.b-media__object--rev {
-  float: right;
-  margin-left: 20px; }
-
-.b-media__img img,
-.b-media__img--rev img {
-  display: block; }
-
-.b-media__body {
-  overflow: hidden; }
-
-.b-media__body,
-.b-media__body > :last-child {
-  margin-bottom: 0; }
 
 .b-btn {
   display: inline-block;
@@ -1000,7 +938,7 @@ body.home .p-header__nav li.is-current a {
   background-image: url("/assets/img/logo--bytemark.png"); }
 
 .p-footer__partners {
-  padding: 60px 20px;
+  padding: 60px 5px;
   background: white;
   text-align: center; }
   .p-footer__partners li {
@@ -1518,7 +1456,8 @@ body.blog .p-grid {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.8; }
+    opacity: 0.7;
+    filter: saturate(0%); }
   @media screen and (min-width: 767px) {
     .p-about__image {
       display: block;
@@ -1528,7 +1467,8 @@ body.blog .p-grid {
       height: 100vh;
       background-repeat: no-repeat;
       background-size: cover;
-      opacity: 0.8; } }
+      opacity: 0.7;
+      filter: saturate(0%); } }
 
 .p-about.is-image-left .p-about__image {
   left: 0;
