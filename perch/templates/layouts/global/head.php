@@ -4,7 +4,9 @@
    	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<link href='/assets/css/master.css?v=1.5' rel='stylesheet' />
+	<link href='/assets/css/master.css?v=1.6' rel='stylesheet' />
+	<link rel="stylesheet" href="https://use.typekit.net/ssn0xfy.css">
+
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 	<?php 
@@ -40,7 +42,16 @@
 				'value'		=>	perch_get('slug')
 		    ]);
 
-		} else {
+		} else if (perch_layout_var('meta', true) == 'mini') {
+
+			perch_collection('Minis', [
+				'template'  => 	'events/mini-meta.html',
+				'filter'	=>	'slug',
+				'match'		=>	'eq',
+				'value'		=>	perch_get('slug')
+		    ]);
+
+		}  else {
 			perch_page_attributes(); ?>	
 
 			<meta property="og:site_name" content="Dot York" />
@@ -58,7 +69,7 @@
 	<?php	} ?>
 	
 	<meta property="fb:app_id" content="2389015207990323"/>
-
+	
 </head>
 
 <?php 

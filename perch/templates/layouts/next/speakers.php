@@ -51,15 +51,9 @@
       </div>
   </section>
 
-
-
-  <?php
-
-  perch_collection('Events', [
-    'filter'      => 'date',
-    'match'       => 'eqbetween',
-    'value'       => $year_from . ' ,' . $year_to,
-    'template'    => 'collections/events_sponsors.html'
+<?php
+  perch_layout('partials/partners', [
+    'partners' => 'all'
   ]);
-
- ?>
+  perch_layout('partials/newsletter');
+?>

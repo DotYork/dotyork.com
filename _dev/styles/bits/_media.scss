@@ -15,7 +15,7 @@
 //  Config
 //------------------------------------//
 
-$use-media      : false !default;
+$use-media      : true !default;
 
 
 
@@ -33,7 +33,7 @@ $use-media      : false !default;
 
     .b-media {
         display: block;
-        @extend %clearfix;
+        
     }
 
 

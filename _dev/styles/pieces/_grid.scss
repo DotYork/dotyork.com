@@ -49,6 +49,7 @@
 //------------------------------------//
 
 .p-grid-item {
+	
 	a {
 		display: block;
 	}
@@ -115,6 +116,12 @@ body.blog .p-grid {
 }
 
 .p-grid--blog  {
+
+	.p-grid-item {
+		@include mq(799px, max) {
+			margin-bottom: 30px;
+		}
+	}
 
 	.p-grid-item__title {
 		display: inline-block;

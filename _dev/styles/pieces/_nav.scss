@@ -1,0 +1,203 @@
+.p-nav {
+  float: right;
+}
+
+.p-nav-list {
+}
+
+.p-nav-item {
+  @include font-size(18);
+
+  display: inline-block;
+  line-height: 40px;
+  margin-right: 30px;
+ 
+  &.is-current {
+    a {
+      border-bottom: solid 2px $color-yellow;
+    }
+  }
+}
+
+.p-nav-item a {
+  display: block;
+  line-height: 30px;
+
+  &:hover {
+    color: $color-yellow;
+    border-bottom: solid 2px white;
+  }
+}
+
+
+  //
+	//	Variant
+	//
+
+	.p-header.is-yellow .p-nav {
+		li.is-current a,
+		a:hover {
+			border-bottom: solid 2px black;
+			color: black;
+		}
+  } 
+  
+  
+  
+  
+  
+  //------------------------------------//
+  //  Ticket Button
+  //------------------------------------//
+
+  .p-nav-item--ticket {
+    @include font-size(14);
+
+    font-weight: $font-weight-bold;
+    letter-spacing: 1px;
+    margin-right: 0;
+    text-transform: uppercase;
+
+    a {
+      background: $color-green;
+      border: none !important;
+      border-radius: 20px;
+      color: white;
+      display: inline-block;
+      line-height: 40px;
+      padding: 0 30px;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background: $color-yellow;
+        color: black;
+      }
+    }
+  }
+
+    .p-header.is-green .p-nav-item--ticket {
+      a {
+        background: $color-purple;
+        color: white;
+
+        &:hover {
+          background: $color-yellow;
+          color: black;
+        }
+      }
+    }
+
+    .p-header.is-yellow .p-nav-item--ticket {
+      a {
+        background: $color-green;
+        color: white;
+
+        &:hover {
+          background: white;
+          color: black;
+          border: none;
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+//------------------------------------//
+//  Mobile
+//------------------------------------//
+
+// @include mq(650px, max) {
+// 	.p-header__nav {
+// 		float: none;
+// 		position: fixed;
+// 		right: -250px;
+// 		top: 0;
+// 		z-index: 10;
+
+// 		width: 250px;
+// 		padding: 10px;
+// 		height: 100%;
+
+// 		background: $color-dark;
+
+// 		li {
+// 			display: block !important;
+// 			border-bottom: solid 1px $color-yellow;
+
+// 			a {
+// 				display: block !important;
+// 				padding: 10px;
+// 				text-align: center;
+// 				border-bottom: 0;
+// 				&:hover {
+// 					border-bottom: 0;
+// 				}
+// 			}
+
+// 			&.is-current a {
+// 				border-bottom: 0;
+// 				color: $color-yellow;
+// 			}
+// 		}
+
+// 		@include transition(right 0.1s ease-in-out);
+
+// 		&.is-active {
+// 			right: 0;
+// 		}
+// 	}
+
+// 	.p-header__nav__trigger {
+// 		display: block;
+
+// 		float: right;
+
+// 		height: 30px;
+// 		width: 30px;
+
+// 		padding: 8px 7px;
+
+// 		background: white;
+// 		border-radius: $border-radius;
+
+// 		text-align: center;
+
+// 		span {
+// 			@include burger(16px, 3px, 3px, $color-purple);
+// 		}
+
+// 		@include transition(right 0.5s ease-in-out);
+
+// 		&.is-active {
+// 			position: relative;
+// 			right: 240px;
+
+// 			span {
+// 				@include burger-to-cross;
+// 			}
+// 		}
+// 	}
+// }
+
+// @include mq(500px, max) {
+// 	.p-header.is-active {
+// 		a.p-logo {
+// 			opacity: 0;
+// 		}
+// 	}
+// }
+
+// 	//
+// 	//	Trigger
+// 	//
+
+// 	.p-header__nav__trigger {
+// 		display: none;
+// 	}

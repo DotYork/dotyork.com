@@ -6,6 +6,7 @@
 <perch:related id="author" collection="Authors" label="Author" size="m">
 	<perch:content id="slug" type="slug" />
 </perch:related>
+<perch:content id="category" label="Category" type="select" options="DotYork, York, 2017, 2018, Interviews" />
 
 <perch:content id="excerpt" type="textarea" markdown="true" editor="simplemde" label="About" size="s" />
 
@@ -93,7 +94,9 @@
 		</div>
 	</perch:block>
 
-
+	<perch:block type="interview" label="Interview">
+		<perch:template path="content/blocks/article_interview.html" />
+	</perch:block>
 	
 </perch:blocks>
 

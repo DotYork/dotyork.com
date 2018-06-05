@@ -1,0 +1,11 @@
+<section class="p-banner<perch:if id="is_full" value="true" match="eq"> p-banner--full</perch:if> is-<perch:content id="colour" type="select" options="yellow, green, purple, blue" label="Backgorund colour" order="3" />">
+  <div class="b-container">
+    <h1 class="t-xxxl p-banner__title"><perch:content id="title" type="text" label="Title" order="1" /></h1>
+
+    <perch:if exists="subtitle">
+      <p class="t-l p-banner__subtitle"><perch:content id="subtitle" type="text" label="Subtitle" order="2" /></p>
+    </perch:if> 
+  </div>
+</section>
+
+<perch:content id="is_full" type="checkbox" value="true" label="Is full height?" suppress="true" order="4" />

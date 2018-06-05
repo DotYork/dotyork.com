@@ -50,18 +50,13 @@
       ?>
     </div>
   </section>
-
-      <?php
-
-      //	Sponsors
-      perch_collection('Events', [
-          'filter'      => 'date',
-          'match'       => 'eqbetween',
-          'value'       => $year_from . ' ,' . $year_to,
-          'template'    => 'collections/events_sponsors.html'
-      ]);
-
+<?php
   echo '</div>';
+
+  perch_layout('partials/partners', [
+      'partners' => 'all'
+  ]);
+  perch_layout('partials/newsletter');
 
   //	Global Footer with next event visible
   perch_layout('global/footer', [

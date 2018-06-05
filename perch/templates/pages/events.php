@@ -24,6 +24,9 @@
 		    
 	echo '</div>';
 
+	perch_layout('partials/newsletter');
+	perch_layout('partials/partners');
+
   perch_layout('global/footer', [
     'next-event' => 'true',
   ]);

@@ -88,6 +88,10 @@
 		opacity: 0.7;
 		filter: saturate(0%);
 	}
+
+	@include mq($bp-tablet - 1px, max) {
+		background-image: none !important;
+	}
 }
 
 	.p-about.is-image-left .p-about__image {

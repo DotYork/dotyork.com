@@ -12,7 +12,6 @@
 }
 
 .p-partner--gold {
-	margin-bottom: 50px;
 
 	img {
 		max-width: 100px;
@@ -30,11 +29,14 @@
 		text-align: center;
 		font-size: 12px;
 	}
+	
+	li:last-child {
+		margin-bottom: 50px;
+	}
 }
 
 
 .p-partner--silver {
-	margin-bottom: 20px;
 
 	li {
 		width: 49%;
@@ -45,6 +47,10 @@
 
 		@include mq(767px) {
 			width: 23%;
+		}
+
+		&:last-child {
+			margin-bottom: 20px;
 		}
 	}
 
@@ -155,3 +161,56 @@
 		}
 	}
 }
+
+
+
+
+//------------------------------------//
+//  Credits
+//------------------------------------//
+
+.p-partners-credits {
+	margin-top: 50px;
+}
+
+
+	//
+	//	List
+	//
+	
+	.p-partners-credits__list {
+		margin-top: 40px;
+	}
+
+
+
+	//
+	//	Logo
+	//
+
+	.p-partners-credits__logo {
+		display: block;
+
+		width: 210px;
+		height: 60px;
+
+		background-size: 100%;
+		background-repeat: no-repeat;
+
+		text-indent: -999em;
+
+	}
+
+
+		//	Isotoma
+
+		.p-partners-credits__logo--isotoma {
+			background-image: url('/assets/img/logo--isotoma.png');
+		}
+
+
+		//	Bytemark
+
+		.p-partners-credits__logo--bytemark {
+			background-image: url('/assets/img/logo--bytemark.png');
+		}

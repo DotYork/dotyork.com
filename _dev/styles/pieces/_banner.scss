@@ -1,0 +1,98 @@
+//  Banner
+//  ======
+
+//  Contains Page Title
+//  Will have a background colour (different for each section)
+//    - Conf = Yellow
+//    - About = Blue
+//    - Blog = Purple
+
+
+
+//------------------------------------//
+//  Container
+//------------------------------------//
+
+.p-banner {
+  align-items: center;
+  display: flex;
+  padding: 220px 0 120px 0;
+  text-align: center;
+
+  &, a {
+    color: white;
+  }
+  
+  &.is-blue   { background: $color-blue;}
+  &.is-purple { background: $color-purple;}
+  &.is-green  { background: $color-green;}
+  &.is-yellow { 
+    background: $color-yellow;
+
+    &, a {
+      color: black;
+    }
+  }
+}
+  
+  .p-banner--full {
+
+    @include mq(480px) {
+      height: 100vh;
+    }
+  }
+
+
+
+
+
+//------------------------------------//
+//  Title
+//------------------------------------//
+
+.p-banner__title {
+  font-family: $alt-font-family;
+  margin: 0 auto;
+  max-width: 280px;
+
+  @include mq(480px) {
+    max-width: 450px;
+  }
+
+  @include mq(768px) {
+    max-width: 730px;
+  }
+
+  @include mq(900px) {
+    max-width: 900px;
+  }
+}
+
+
+
+
+
+//------------------------------------//
+//  Subtitle
+//------------------------------------//
+
+.p-banner__subtitle {
+  @include font-size(16);
+
+  color: $color-yellow;
+  margin-top: 20px;
+
+  .is-yellow & {
+    color: black
+  }
+
+  @include mq(480px) {
+    margin-top: 40px;
+  }
+
+  @include mq(768px) {
+    @include font-size(20);
+  }
+}
+
+

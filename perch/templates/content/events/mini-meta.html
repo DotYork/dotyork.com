@@ -1,0 +1,12 @@
+<meta name="description" content="<perch:content id="title" /> | <perch:content id="date" format="l jS F Y" />" />
+
+<meta property="og:site_name" content="DotYork" />
+<meta name="og:title" content="<perch:content id="title" />" />
+<meta name="og:url" content="https://dotyork.com/events/<perch:content id="slug" />" />
+<meta name="og:description" content="<perch:content id="intro" />" />
+
+<perch:if exists="image">
+	<meta name="og:image" content="https://dotyork.com/<perch:content id="image" type="image" />" />
+<perch:else />
+	<meta property="og:image" content="https://dotyork.com/assets/img/social.jpg" />
+</perch:if>

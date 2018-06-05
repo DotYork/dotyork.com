@@ -43,8 +43,15 @@ dl,
 ul, 
 ol, 
 aside, 
-blockquote,
-%clearfix {
+blockquote {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin clearfix {
 	&:after {
 		content: "";
 		display: table;

@@ -58,47 +58,16 @@
 	//
 
 	.p-footer__social {
-		margin-bottom: 40px;
+		margin-top: 20px;
 
-		li {
-			margin: 0 5px;
+		@include mq(768px) {
+			float: right;
+			margin: 0;
 		}
 
-		@include mq(500px) {
-
-			li {
-				margin: 0 10px;
-			}
-		}
-	}
-
-
-
-	//
-	//	Nav
-	//
-
-	.p-footer__nav {
-		margin-bottom: 20px;
-
-		li {
-
-			&:after {
-				display: inline;
-				content: "|";
-				padding: 0 10px;
-			}
-
-			&:last-child:after {
-				display: none;
-			}
-		}
-
-		a {
-			border-bottom: solid 1px $color-yellow;
-
+		.p-social-item svg {
 			&:hover {
-				border-color: black;
+				fill: $color-blue;
 			}
 		}
 	}
@@ -110,66 +79,17 @@
 	//
 
 	.p-footer__copy {
+		margin-top: 10px;
+		
+		
 		@include mq(500px, max) {
 			span { display: block; }
 		}
-	}
 
-
-
-
-
-//------------------------------------//
-//  Credits
-//------------------------------------//
-
-.p-footer-credits {
-	padding: 40px 20px;
-	background: $color-purple;
-	text-align: center;
-}
-
-
-
-	//
-	//	List
-	//
-
-	.p-footer-credits__list {
-		margin-top: 40px;
-	}
-
-
-
-	//
-	//	Logo
-	//
-
-	.p-footer-credits__logo {
-		display: block;
-
-		width: 166px;
-		height: 50px;
-
-		background-size: 100%;
-
-		text-indent: -999em;
-
-	}
-
-
-		//	Isotoma
-
-		.p-footer-credits__logo--isotoma {
-			background-image: url('/assets/img/logo--isotoma.png');
+		@include mq(768px) {
+			text-align: left;
 		}
-
-
-		//	Bytemark
-
-		.p-footer-credits__logo--bytemark {
-			background-image: url('/assets/img/logo--bytemark.png');
-		}
+	}
 
 
 
@@ -180,9 +100,6 @@
 //------------------------------------//
 
 .p-footer__partners {
-	padding: 60px 5px;
-	background: white;
-	text-align: center;
 
 	li {
 		margin: 0 15px;
@@ -202,53 +119,78 @@
 
 
 
-//------------------------------------//
-//  Next Event
-//------------------------------------//
+	//------------------------------------//
+	//  Nav
+	//------------------------------------//
 
-.p-footer__next-event {
-	padding: 10px;
-	background: $color-yellow;
-	color: white;
-	text-align: center;
+	.p-footer {
 
-	a {
-		display: block;
-		text-decoration: none;
-		color: $color-dark;
+	}
+	
+
+	.p-footer__grid {
 	}
 
-	b {
-		text-transform: uppercase;
-		margin-right: 5px;
-		vertical-align: middle;
-	}
+	.p-footer-nav {
+		ul {
+			margin-bottom: 20px;
+		}
+	
+		li {
+			&:first-child {
+				font-weight: $font-weight-bold;
+			}
+		}
 
-	@include mq(650px, max) {
-		b {
-			display: block;
-			margin-bottom: 10px;
+		@include mq(480px) {
+			ul {
+				margin-bottom: 0;
+			}
+
+			li {
+				display: inline-block;
+
+				&:after {
+					display: inline;
+					content: ' |';
+				}
+
+				&:first-child {
+					&:after { content: ' - '}
+				}
+
+			
+				&:last-child {
+					&:after { display: none;}
+				}
+			}
+		}
+
+		@include mq(768px) {
+			float: left;
+			text-align: left;
 		}
 	}
-}
 
-
-
-	span.p-footer__next-event__arrow {
-		display: none;
-
-		@include mq(450px) {
-			display: inline-block;
-			height: 12px;
-			width: 23px;
-
-			margin-left: 10px;
-
-			vertical-align: middle;
+		.p-footer-nav__title {
+			font-weight: $font-weight-bold;
 		}
-	}
 
+		.p-footer-nav__list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
 
+			li.is-active a {
+				border-bottom: solid 1px black;
+			}
+
+			a {
+				&:hover {
+					border-bottom: solid 1px black;
+				}
+			}
+		}
 
 
 

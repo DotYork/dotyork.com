@@ -22,6 +22,12 @@ p.p-event-archive__meta {
 	margin: 0 auto 40px auto;
 }
 
+.p-event-archive__intro {
+	font-size: 18px;
+	max-width: 700px;
+	margin: 0 auto 20px auto;
+}
+
 
 
 
@@ -35,7 +41,7 @@ p.p-event-archive__meta {
 }
 
 .p-event {
-	@extend %clearfix;
+	@include clearfix;
 
 	margin-bottom: 24px;
 	padding: 12px;

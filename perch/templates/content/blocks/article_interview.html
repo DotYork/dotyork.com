@@ -1,0 +1,15 @@
+<perch:content id="interview_name" type="text" label="Name" />
+<perch:content id="interview_date" type="date" label="Interview Date" />
+<perch:content id="interview_image" type="image" label="Photo" width="300" height="300" density="1.5" crop="true" />
+<perch:content id="interview_about" type="textarea" label="About" markdown="true" editor="simplemde" />
+<perch:content id="interview_twitter" type="text" label="Twitter Username" />
+<perch:content id="interview_linkedin" type="text" label="Linkedin Username" />
+<perch:content id="interview_website" type="text" label="Website" />
+<perch:content id="interview_date" type="date" label="Interview Date" />
+
+<perch:repeater id="interview_questions" label="Q&A">
+  <perch:content id="interview_question" label="Question" />
+  <perch:content id="interview_answer" type="textarea" label="Answer" markdown="true" editor="simplemde" />
+</perch:repeater>
+
+<perch:content id="interview_outro" type="textarea" label="Outro" markdown="true" editor="simplemde" />

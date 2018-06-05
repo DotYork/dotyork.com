@@ -10,57 +10,48 @@
 //------------------------------------//
 
 .p-header {
+	left: 0;
+	height: 100px;
+	padding: 30px 0;
 	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
+	z-index: 1;
 
-	padding: 40px 0;
-
-	@include mq(767px, max) {
-		padding: 15px 0;
+	&, a {
+		color: white;
 	}
-}
 
-body.home .p-header {
-	background: $color-yellow;
-	color: black;
+	&.is-yellow {
+		&, a { color: black;}
+	}
 
-	a {
-		color: black;
+	&.is-purple {
+		background: $color-purple;
 	}
 }
 
 body.blog .p-header {
 	background: $color-purple;
-
-	color: white;
-
-	a {
-		color: white;
-	}
 }
 
 
-body.speakers .p-header,
-body.videos .p-header {
-	background: $color-green;
 
-	color: white;
 
-	a {
-		color: white;
-	}
-}
 
+//------------------------------------//
+//  Logo
+//------------------------------------//
 
 .p-logo {
 	display: block;
 
 	float: left;
 
-	width: 190px;
-	height: 37px;
+	width: 205px;
+	height: 40px;
+
+	margin: 0 auto;
 
 	text-indent: -999em;
 
@@ -82,158 +73,23 @@ body.videos .p-header {
 		background: url('/assets/img/mark.svg?v=2') no-repeat;
 		background-size: 100%;
 	}
-}
-	body.home .p-logo {
-		background-image: url('/assets/img/logo--black.svg?v=2');
-		@include mq($bp-mobile, max) { background-image: url('/assets/img/mark--black.svg?v=2'); }
-	}
 
-.p-header__nav {
-	float: right;
-
-	li {
-		margin-right: 5px;
-		padding: 0 10px;
-		line-height: 35px;
-		@include font-size(16);
-
-		a {
-			line-height: 1.5;
-			border-bottom: solid 2px transparent;
-			text-decoration: none;
-
-			&:hover {
-				border-bottom: solid 2px $color-yellow;
-			}
-		}
-
-		&.is-current a {
-			border-bottom: solid 2px $color-yellow;
-		}
-
-		@include mq($bp-tablet, max) {
-			line-height: 30px;
-		}
-	}
-}
-
-	body.home .p-header__nav li a:hover {
-		border-bottom: solid 2px black;
-	}
-
-	body.home .p-header__nav li.is-current a {
-		border-color: black
-	}
-
-.p-header__nav__trigger {
-	display: none;
-}
-
-
-//	Mobile Nav
-
-@include mq(650px, max) {
-	.p-header__nav {
+	.is-landing & {
 		float: none;
-		position: fixed;
-		right: -250px;
-		top: 0;
-		z-index: 10;
-
-		width: 250px;
-		padding: 10px;
-		height: 100%;
-
-		background: $color-dark;
-
-		li {
-			display: block !important;
-			border-bottom: solid 1px $color-yellow;
-
-			a {
-				display: block !important;
-				padding: 10px;
-				text-align: center;
-				border-bottom: 0;
-				&:hover {
-					border-bottom: 0;
-				}
-			}
-
-			&.is-current a {
-				border-bottom: 0;
-				color: $color-yellow;
-			}
-		}
-
-		@include transition(right 0.1s ease-in-out);
-
-		&.is-active {
-			right: 0;
-		}
-	}
-
-	.p-header__nav__trigger {
-		display: block;
-
-		float: right;
-
-		height: 30px;
-		width: 30px;
-
-		padding: 8px 7px;
-
-		background: white;
-		border-radius: $border-radius;
-
-		text-align: center;
-
-		span {
-			@include burger(16px, 3px, 3px, $color-purple);
-		}
-
-		@include transition(right 0.5s ease-in-out);
-
-		&.is-active {
-			position: relative;
-			right: 240px;
-
-			span {
-				@include burger-to-cross;
-			}
-		}
-	}
-}
-
-@include mq(500px, max) {
-	.p-header.is-active {
-		a.p-logo {
-			opacity: 0;
-		}
+		margin: 0 auto;
 	}
 }
 
 
-.p-header__event {
-	line-height: 30px;
-	font-size: 14px;
-	margin-bottom: 0 !important;
-	text-transform: none !important;
-	border-bottom: solid 1px $color-yellow;
+	//
+	//	Variant
+	//
+
+	.p-header.is-yellow .p-logo {
+		background-image: url('/assets/img/logo--black.svg');
+
+		@include mq($bp-mobile, max) {
+			background-image: url('/assets/img/mark--black.svg');
+		}
+	}
 	
-	@include mq($bp-tablet, max) {
-			line-height: 30px;
-			font-size: 12px;
-		}
-
-	span:before,
-	a:before {
-		font-size: 22px;
-		vertical-align: middle;
-		margin-right: 5px;
-	}
-
-	a:hover {
-		border: none !important;
-	}
-}

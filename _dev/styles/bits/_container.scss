@@ -29,7 +29,6 @@
 	@include mq($bp-tablet, max) {
 		width: 100%;
 		float: none;
-		@extend %clearfix;
 		display: block;
 	}
 }
@@ -45,7 +44,6 @@
 		margin-top: 40px;
 		margin-left: 0;
 		clear: both;
-		@extend %clearfix;
 	}
 }
 

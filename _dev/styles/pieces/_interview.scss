@@ -1,0 +1,116 @@
+.p-interview {
+
+}
+
+.p-interview__header {
+  background: $color-purple;
+  color: white;
+  padding: 250px 0 150px 0;
+
+  @include mq(600px, max) {
+    padding: 150px 0 50px 0;
+  }
+}
+
+.p-interviewee__social {
+  margin-top: 30px;
+
+  .p-social-item svg {
+    fill: white;
+  
+    &:hover {
+      fill: $color-yellow;
+    }
+  }
+}
+
+.p-interviewee {
+  &:after {
+    content: "";
+		display: table;
+		clear: both;
+  }
+}
+
+.p-interviewee__photo {
+  border: solid 3px $color-yellow;
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+
+  @include mq($bp-tablet) {
+    height: 250px;
+    width: 250px;
+  }
+
+  @include mq(600px, max) {
+    float: none;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+}
+
+.p-interviewee__name {
+  
+}
+
+.p-interviewee__about {
+  p {
+    color: white;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    color: white;
+    border-color: $color-yellow;
+
+    &:hover {
+      border-color: white;
+    }
+  }
+}
+
+.p-interview__meta {
+  @include mq(500px, max) {
+    span {
+      display: block;
+    }
+
+    a {
+      color: $color-yellow;
+    }
+  }
+}
+
+.p-interview__body {
+  margin: 0 auto;
+  padding: 100px 24px;
+
+	@include mq($bp-desktop, max) {
+		padding: 60px 24px;
+	}
+}
+
+.p-interview__question {
+  color: $color-purple;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.p-interview__answer {
+  margin-bottom: 40px;
+  p {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.p-interview__outro {
+  border-top: solid 1px $color-purple;
+  padding-top: 30px;
+}

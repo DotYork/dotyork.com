@@ -30,9 +30,19 @@
 						<a href="/<perch:content id="date" format="Y" />"><perch:content id="title" /></a>
 					</perch:related>
 
+					<perch:related id="mini" collection="Minis">
+						| Filmed on <perch:content id="date" format="jS F Y" /> 
+							at
+						<a href="/events/<perch:content id="slug" />"><perch:content id="title" /></a>
+					</perch:related>
+
 				<perch:else />
 					<perch:related id="event" collection="Events">
 						<perch:content id="date" format="jS F Y" /> at <a href="/<perch:content id="date" format="Y" />"><perch:content id="title" /></a>
+					</perch:related>
+
+					<perch:related id="mini" collection="Minis">
+						<perch:content id="date" format="jS F Y" /> at <a href="/events/<perch:content id="slug" />"><perch:content id="title" /></a>
 					</perch:related>
 				</perch:if>
 			</p>

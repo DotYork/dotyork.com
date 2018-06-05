@@ -12,12 +12,12 @@
 					<perch:else />
 						<perch:content id="first_name" /> <perch:content id="last_name" /><perch:if exists="company">, <perch:content id="company" /></perch:if>
 					</perch:if>
-					
 				</perch:related>
+				in <a href="/blog/<perch:content id="category" format="LC" />"><perch:content id="category"  /></a>
 			</p>
 		</header>
 
-		<div class="b-main js-equalHeight p-article__main">
+		<div class="b-container b-container--small p-article__main">
 			<perch:blocks>
 				<perch:block type="text" label="Text">
 					<perch:template path="content/text_block.html" />
@@ -99,40 +99,14 @@
 						<iframe src="https://www.youtube.com/embed/<perch:content id="video_code" type="text" />" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</perch:block>
+
+				<perch:block type="interview" label="Interview">
+					<perch:template path="content/blocks/article_interview.html" />
+				</perch:block>
 				
 			</perch:blocks>
 
 		</div>
-
-		<aside class="b-aside p-article__aside js-equalHeight">
-			<img src="<perch:content id="image" type="image" />" alt="">
-		<perch:related id="related" collection="Articles" label="Related" divider-before="Meta">
-			<perch:before>
-				
-					<div class="b-half__inner">
-						<h4 class="t-s p-section__title is-yellow">Related Articles</h4>
-							
-						<ul class="b-nav b-nav--stacked">
-			</perch:before>
-			
-						<li class="b-media">
-							<img src="<perch:content id="image" type="image" width="100" height="100" />" alt="<perch:content id="image_alt" />" class="b-media__img" />
-							<div class="b-media__body">
-								<h5><a href="/blog/<perch:content id="slug" />"><perch:content id="title" /></a></h5>
-							</div>
-						</li>
-
-			<perch:after>
-						</ul>
-					</div>
-				
-			</perch:after>
-				
-		</perch:related>
-
-		</aside>
-		
-
 	</article>
 
 

@@ -11,7 +11,8 @@
     'body-class' => 'speakers',
     'title' => $name . " | Dot York",
     'meta' => 'speaker',
-    'nav'		=> 'event'
+		'nav'		=> 'event',
+		'background' => 'is-green'
   ]); 
 
   //echo '<div class="p-event-archive">';
@@ -93,7 +94,26 @@
 	      'match'       => 'eq',
 	      'value'       => perch_get("slug"),
 	      'template'    => 'speakers/talk2.html'
-	  ]);
+		]);
+		
+	perch_layout('partials/newsletter');
+
+	$date = perch_collection('Speakers', [
+		'filter'      => 'slug',
+		'match'       => 'eq',
+		'value'       => perch_get("slug"),
+		'template'    => 'speakers/date.html'
+	], true);
+
+	if ($date != NULL) {
+		perch_layout('partials/partners', [
+			'partners' => $date
+		]);
+	} else {
+		perch_layout('partials/partners');
+	}
+
+  
 
   perch_layout('global/footer', [
     'next-event' => 'true',

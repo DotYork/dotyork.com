@@ -14,3 +14,8 @@
         ?>
     </div>
 </main>
+
+<?php
+  perch_layout('partials/partners');
+  perch_layout('partials/newsletter');
+?>

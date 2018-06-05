@@ -141,9 +141,6 @@
 
 @mixin mq($point, $query1: min, $query2: width) {
  
-    .lt-ie9 & {
-        @content;
-    }
     
     @media screen and (#{$query1}-#{$query2}: $point) {
         @content;

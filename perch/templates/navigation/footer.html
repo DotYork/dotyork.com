@@ -1,11 +1,10 @@
 <perch:before>
-    <ul class="b-nav">
+    <ul class="p-footer-nav__list">
 </perch:before>
 		<li<perch:if exists="current_page"> class="selected"</perch:if><perch:if exists="ancestor_page"> class="ancestor"</perch:if>>
             <a href="<perch:pages id="pagePath" />"><perch:pages id="pageNavText" /></a>   
             <perch:pages id="subitems" encode="false" />
         </li>
 <perch:after>
-		<li><a href="/events">Previously</a></li>
     </ul>
 </perch:after>
