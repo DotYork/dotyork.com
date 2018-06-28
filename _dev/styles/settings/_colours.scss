@@ -2,24 +2,36 @@
 //  Colours
 //------------------------------------//
 
-$color-body 		: 	#fff;
-$color-text 		: 	#6c6e71;
-$color-secondary-text : #bfc5c7;
-
-$color-theme 		: 	#7d99d8;
-
-$color-neutral 		: 	#E6E8ED;
-$color-dark 		: 	#1d1d1b;
-
-$color-positive 	: 	#77c181;
-
-$color-link 		: 	$color-theme;
-
-
+//
 //	2017 Branding
+//
 
-$color-blue 		: 	#10ace1;
-$color-green 		: 	#07a789;
-$color-yellow 		: 	#ffed00;
-$color-purple 		: 	#51328a;
+// $color-blue 		: 	#10ace1;
+// $color-green 		: 	#07a789;
+// $color-yellow 		: #ffed00;
+// $color-purple 		: #51328a;
+// $color-light 		: 	#cce9f4;
+// $color-dark 		: 	#1d1d1b;
+
+//
+//  2018 branding
+//
+
+$color-blue 		: 	#3DD9FC;
+$color-green 		: 	#0C9D5E;
+$color-yellow 	:   #FFED00;
+$color-purple 	:   #894FFF;
 $color-light 		: 	#cce9f4;
+$color-dark 		: 	#21174C;
+
+//  
+//  Site setup
+//
+
+$color-body 		:   #fff;
+$color-text 		:   $color-dark;
+
+$color-link 		: 	$color-blue;
+$color-neutral 	: 	$color-light;
+
+$color-positive :   $color-green;
