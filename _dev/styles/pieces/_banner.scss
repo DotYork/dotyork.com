@@ -2,10 +2,7 @@
 //  ======
 
 //  Contains Page Title
-//  Will have a background colour (different for each section)
-//    - Conf = Yellow
-//    - About = Blue
-//    - Blog = Purple
+//  Will always have a background colour
 
 
 
@@ -17,7 +14,6 @@
   align-items: center;
   display: flex;
   padding: 220px 0 120px 0;
-  text-align: center;
 
   &, a {
     color: white;
@@ -29,9 +25,7 @@
   &.is-yellow { 
     background: $color-yellow;
 
-    &, a {
-      color: black;
-    }
+    &, a { color: black; }
   }
 }
   
@@ -39,6 +33,7 @@
 
     @include mq(480px) {
       height: 100vh;
+      padding: 60px 0 0 0;
     }
   }
 
@@ -52,20 +47,9 @@
 
 .p-banner__title {
   font-family: $alt-font-family;
+  font-weight: $font-weight-bold;
   margin: 0 auto;
-  max-width: 280px;
-
-  @include mq(480px) {
-    max-width: 450px;
-  }
-
-  @include mq(768px) {
-    max-width: 730px;
-  }
-
-  @include mq(900px) {
-    max-width: 900px;
-  }
+  text-transform: uppercase;
 }
 
 
@@ -77,22 +61,20 @@
 //------------------------------------//
 
 .p-banner__subtitle {
-  @include font-size(16);
+  @include font-size(14);
 
   color: $color-yellow;
-  margin-top: 20px;
+  font-weight: $font-weight-bold;
+  margin-top: .75rem;
 
-  .is-yellow & {
-    color: black
-  }
+  .is-yellow & { color: black}
+  .is-purple & { color: $color-yellow}
 
   @include mq(480px) {
-    margin-top: 40px;
+    margin-top: 1rem;
   }
 
   @include mq(768px) {
     @include font-size(20);
   }
 }
-
-
