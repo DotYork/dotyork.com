@@ -81,6 +81,16 @@ $use-buttons            : true !default;
         }
     }
 
+    .b-btn--white {
+        border: solid 2px white;
+        background: white;
+        color: $color-text;
+
+        &:hover {
+            background: $color-yellow;
+        }
+    }
+
 
     .b-btn--positive {
         border: solid 1px $color-green;

@@ -4,7 +4,6 @@
     'title' => '',
   ]); 
 
-
 	perch_content('Content');
 
   perch_layout('global/footer', [

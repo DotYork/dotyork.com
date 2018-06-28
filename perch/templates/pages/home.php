@@ -3,8 +3,7 @@
     'body-class' => 'home',
     'title' => $year,
     'next-event' => 'true',
-    'nav'		=> 'event',
-    'background' => 'is-yellow'
+    'nav'		=> 'event'
   ]); 
 
   

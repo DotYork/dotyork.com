@@ -1,4 +1,3 @@
-
 	<footer class="p-footer">
 		<div class="b-container">
 

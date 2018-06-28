@@ -10,9 +10,39 @@
 
   <?php
 
+  $category = perch_get('category', true);
 
-  if (perch_get('category', true) != 'null') {
-    $category = perch_get('category');
+  if (($category == '1') || ($category != 'all')) {
+    
+    $title = perch_collection('Events', [
+      'count'     => 1,
+      'filter' => array(
+					array(
+						'filter' => 'date',
+						'match' => 'gt',
+						'value' => Date('Y-m-d'),
+					),
+					array(
+						'filter' => 'hide_details',
+						'match' => 'neq',
+						'value' => 'true',
+					),
+				),
+      'template'  => 'title.html'
+    ], true);
+
+    if ($title) {
+      $category = Date('Y');
+    } else {
+      $category == 'all';
+    }
+  }
+
+  
+  
+
+
+  if (($category != 'all')) {
 
     if ($category == 'dotyork' || $category == 'york') { 
       $category_title = $category .' News';
@@ -22,7 +52,7 @@
       $category_title = $category .' Updates';
     }
 
-    echo '<h1 class="t-s p-section__title is-center is-purple">'.$category_title.' <a href="/blog" class="p-section__title__all">view all</a></h1>';
+    echo '<h1 class="t-s p-section__title is-center is-purple">'.$category_title.' <a href="/blog/all" class="p-section__title__all">view all</a></h1>';
     perch_collection('Articles', [
       'sort'        => 'date',
       'sort-order'  => 'DESC',

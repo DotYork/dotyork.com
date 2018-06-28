@@ -2,22 +2,10 @@
 //  ======
 
 
-//	Container 					-- 	the whole thing
-
-//	Bottom 						--	the section at the end with the social links, nav & credits
-//		Social List
-//		Nav
-//		Credits
-
-//	Credits						--	brought to you by
-//		List
-//		Logo
-//			Isotoma
-//			Bytemark
-
-//	Partners
-
-//	Next Event
+// Container
+// Navigation
+// Social
+// Copyright
 
 
 
@@ -27,35 +15,90 @@
 //  Container
 //------------------------------------//
 
-.p-footer__container {
-
-}
-
-
-
-
-
-//------------------------------------//
-//  Bottom
-//------------------------------------//
-
 .p-footer {
-	padding: 40px 20px;
+	background: $color-dark;
+	padding: 40px 0;
 	text-align: center;
-	background: $color-yellow;
-	color: black;
 
-	a {
-		color: black;
-		border-color: $color-yellow;
+	&, a {
+		color: white;
 	}
 }
 
 
 
-	//
-	//	Social List
-	//
+
+
+//------------------------------------//
+//  Navigation
+//------------------------------------//
+
+.p-footer-nav {
+
+	@include mq(768px) {
+		float: left;
+		text-align: left;
+	}
+}
+
+
+
+	// 
+	// List
+	// 
+
+	.p-footer-nav__list {
+		list-style: none;
+		margin: 0 0 20px 0;
+		padding: 0;
+
+		@include mq($bp-mobile) {
+			margin-bottom: 0;
+		}
+	}
+
+
+
+		// 
+		// List Item
+		// 
+
+			.p-footer-nav__list li {
+				&:first-child { font-weight: $font-weight-bold;}
+				&.is-active a { border-color: $color-yellow;}
+
+				@include mq($bp-mobile) {
+					display: inline-block;
+
+					&:after {
+						content: ' |';
+						display: inline;
+					}
+
+					&:first-child:after { content: ' -'; }
+					&:last-child:after  { display: none;}
+				}
+			}
+
+
+
+				// 
+				// Link
+				// 
+
+				.p-footer-nav__list li a {
+					border-bottom: solid 1px $color-dark;
+
+					&:hover { border-color: $color-yellow;}
+				}
+
+
+
+
+
+//------------------------------------//
+//  Social
+//------------------------------------//
 
 	.p-footer__social {
 		margin-top: 20px;
@@ -66,131 +109,26 @@
 		}
 
 		.p-social-item svg {
-			&:hover {
-				fill: $color-blue;
-			}
+			fill: white;
+
+			&:hover { fill: $color-yellow;}
 		}
 	}
 
 
 
-	//
-	//	Copy
-	//
+
+
+	//------------------------------------//
+	//  Copyright
+	//------------------------------------//
 
 	.p-footer__copy {
+		@include font-size-xs;
+
 		margin-top: 10px;
 		
-		
-		@include mq(500px, max) {
-			span { display: block; }
-		}
+		@include mq(500px, max) { span { display: block; } }
 
-		@include mq(768px) {
-			text-align: left;
-		}
+		@include mq($bp-tablet) { text-align: left;	}
 	}
-
-
-
-
-
-//------------------------------------//
-//  Partners
-//------------------------------------//
-
-.p-footer__partners {
-
-	li {
-		margin: 0 15px;
-		vertical-align: middle;
-	}
-
-	img {
-		width: 150px;
-
-		@include mq($bp-tablet) {
-			width: 180px;
-		}
-	}
-}
-
-
-
-
-
-	//------------------------------------//
-	//  Nav
-	//------------------------------------//
-
-	.p-footer {
-
-	}
-	
-
-	.p-footer__grid {
-	}
-
-	.p-footer-nav {
-		ul {
-			margin-bottom: 20px;
-		}
-	
-		li {
-			&:first-child {
-				font-weight: $font-weight-bold;
-			}
-		}
-
-		@include mq(480px) {
-			ul {
-				margin-bottom: 0;
-			}
-
-			li {
-				display: inline-block;
-
-				&:after {
-					display: inline;
-					content: ' |';
-				}
-
-				&:first-child {
-					&:after { content: ' - '}
-				}
-
-			
-				&:last-child {
-					&:after { display: none;}
-				}
-			}
-		}
-
-		@include mq(768px) {
-			float: left;
-			text-align: left;
-		}
-	}
-
-		.p-footer-nav__title {
-			font-weight: $font-weight-bold;
-		}
-
-		.p-footer-nav__list {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-
-			li.is-active a {
-				border-bottom: solid 1px black;
-			}
-
-			a {
-				&:hover {
-					border-bottom: solid 1px black;
-				}
-			}
-		}
-
-
-

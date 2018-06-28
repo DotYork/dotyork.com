@@ -1,0 +1,45 @@
+.p-wysiwyg {
+
+  h1 {
+
+  }
+
+  h2 {
+    @include font-size-xl($font-weight-bold);
+
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    @include font-size-l($font-weight-bold);
+
+    margin-bottom: 1rem;
+  }
+
+  h4, 
+  h5, 
+  h6 {
+    @include font-size-m($font-weight-bold);
+  }
+
+  p {
+    @include font-size-m();
+
+    &:not(:last-child) { margin-bottom: 2rem;}
+  }
+
+  ul, ol {
+    @include font-size-m();
+
+    li {
+
+    }
+  }
+
+  blockquote {
+    p {
+      @include font-size-l();
+    }
+  }
+
+}

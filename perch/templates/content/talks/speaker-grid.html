@@ -1,28 +1,46 @@
 <perch:before>
-	<ul class="p-grid p-grid--speakers">
+		<ul class="p-grid p-grid--speakers">
 </perch:before>
 
-	<perch:if id="show-talk" match="eq" value="true">
-		<li class="p-grid-item has-talk">
-	<perch:else />
-		<li class="p-grid-item no-talk">
-	</perch:if>
+	<perch:related id="speaker" collection="Speakers" scope-parent="true">
 
-		<perch:related id="speaker" collection="Speakers" label="Speaker" size="m">
-			<a href="/speakers/<perch:content id="slug" />">
-
-				<img src="<perch:content id="photo" type="image" width="200" height="200" density="1.5" />" alt="<perch:content id="first_name" /> <perch:content id="last_name" />" class="p-grid-item__image" />
-
-				<span class="p-grid-item__title"><perch:content id="first_name" /> <perch:content id="last_name" /></span>
-		</perch:related>
+		<perch:if id="secret" value="true" match="eq">
 
 			<perch:if id="show-talk" match="eq" value="true">
-				<span class="p-grid-item__desc"><perch:content id="talk" /></span>
+				<li class="p-grid-item has-talk">
+			<perch:else />
+				<li class="p-grid-item no-talk">
 			</perch:if>
-			
-		</a>
-	</li>
+					
+					<img src="/assets/img/default_speaker.jpg" alt="To be announced" class="p-grid-item__image" />
+					<span class="p-grid-item__title"><perch:content id="clue" /></span>
+
+				</li>
+				
+		<perch:else />
+
+			<perch:if id="show-talk" match="eq" value="true">
+				<li class="p-grid-item has-talk">
+			<perch:else />
+				<li class="p-grid-item no-talk">
+			</perch:if>
+		
+					<a href="/speakers/<perch:content id="slug" />">
+		
+						<img src="<perch:content id="photo" type="image" width="200" height="200" density="1.5" />" alt="<perch:content id="first_name" /> <perch:content id="last_name" />" class="p-grid-item__image" />
+		
+						<span class="p-grid-item__title"><perch:content id="first_name" /> <perch:content id="last_name" /></span>
+		
+						<perch:if id="show-talk" match="eq" value="true">
+							<span class="p-grid-item__desc"><perch:content id="parent.talk" /></span>
+						</perch:if>
+					
+				</a>
+			</li>
+
+		</perch:if>
+	</perch:related>
 
 <perch:after>
-	</ul>
+		</ul>
 </perch:after>

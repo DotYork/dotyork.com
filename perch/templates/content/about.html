@@ -1,14 +1,16 @@
 
-	<div class="p-page__header">
-		<h1 class="t-xl"><perch:content id="title" label="Title" /></h1>
-		<perch:if exists="meta">
-			<p class="t-s"><perch:content id="meta" label="Meta" type="text" help="optional" /></p>
-		</perch:if>
+	<div class="p-banner is-purple">
+		<div class="b-container">
+			<h1 class="p-banner__title js-altFont"><perch:content id="title" label="Title" /></h1>
+			<perch:if exists="meta">
+				<p class="p-banner__subtitle"><perch:content id="meta" label="Meta" type="text" help="optional" /></p>
+			</perch:if>
+		</div>
 	</div>
 
-	<div class="b-container b-container--small">
+	<div class="b-container">
+		<div class="p-page p-wysiwyg">
 
-		<div class="p-page has-margin">
 			<perch:blocks>
 				<perch:block type="text" label="Text">
 					<perch:template path="content/text_block.html" />
@@ -84,6 +86,7 @@
 					<!--End mc_embed_signup-->
 				</perch:block>
 			</perch:blocks>
-		</div>
+
+	</div>
 
 	</div>

@@ -11,9 +11,7 @@
 //------------------------------------//
 
 .p-banner {
-  align-items: center;
-  display: flex;
-  padding: 220px 0 120px 0;
+  padding: 200px 0 150px 0;
 
   &, a {
     color: white;
@@ -32,6 +30,8 @@
   .p-banner--full {
 
     @include mq(480px) {
+      align-items: center;
+      display: flex;
       height: 100vh;
       padding: 60px 0 0 0;
     }
@@ -46,10 +46,16 @@
 //------------------------------------//
 
 .p-banner__title {
+  @include font-size(32);
+
   font-family: $alt-font-family;
   font-weight: $font-weight-bold;
-  margin: 0 auto;
-  text-transform: uppercase;
+  line-height: 1;
+  //text-transform: ;
+
+	@include mq($bp-mobile)  { @include font-size(40); max-width: 85%; }
+	@include mq($bp-tablet)  { @include font-size(60); }
+	@include mq($bp-desktop) { @include font-size(80); }
 }
 
 
