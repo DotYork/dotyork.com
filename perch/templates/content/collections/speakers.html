@@ -14,46 +14,12 @@
 <perch:content id="linkedin" type="text" label="LinkedIn Username" help="e.g. name" />
 <perch:content id="discount_code" type="text" label="Discount Code" />
 
-<perch:content id="talk" type="text" label="Talk Title" divider-before="Talk Details" />
 <perch:related id="event" collection="Events" label="Event" size="m">
 	<perch:content id="slug" type="slug" />
 	<perch:content id="date" type="date" />
 </perch:related>
 
-<perch:content id="talk_desc" type="textarea" markdown="true" editor="simplemde" size="s" label="Description" />
-<perch:content id="talk_video" type="text" label="Video Code" help="e.g. mRUaBDUxTF0" />
-<perch:content id="talk_duration" type="text" label="Video Duration" size="s" />
-<perch:content id="talk_format" type="select" options="youtube, vimeo" label="Video Source" />
-<perch:content id="talk_notes" type="textarea" markdown="true" editor="simplemde" size="s" label="Notes" />
-
-<perch:repeater id="talk_links" label="Links">
-	<perch:content id="talk_links_type" type="select" label="Type" options="website, twitter, facebook, book, slides, article" />
-    <perch:content id="talk_links_url" type="text" label="URL" />
-    <perch:content id="talk_links_text" type="text" label="Text" />
-</perch:repeater>
-
-
-<perch:content id="talk2" type="text" label="Talk Title" divider-before="Talk 2 Details" />
-<perch:related id="event2" collection="Events" label="Event" size="m">
-	<perch:content id="slug" type="slug" />
-	<perch:content id="date" type="date" />
-</perch:related>
-
-<perch:content id="talk2_desc" type="textarea" markdown="true" editor="simplemde" size="s" label="Description" />
-<perch:content id="talk2_video" type="text" label="Video Code" help="e.g. mRUaBDUxTF0" />
-<perch:content id="talk2_duration" type="text" label="Video Duration" size="s" />
-<perch:content id="talk2_format" type="select" options="youtube, vimeo" label="Video Source" />
-<perch:content id="talk2_notes" type="textarea" markdown="true" editor="simplemde" size="s" label="Notes" />
-
-<perch:repeater id="talk2_links" label="Links">
-	<perch:content id="talk2_links_type" type="select" label="Type" options="website, twitter, facebook, book, slides, article" />
-    <perch:content id="talk2_links_url" type="text" label="URL" />
-    <perch:content id="talk2_links_text" type="text" label="Text" />
-</perch:repeater>
-
-
 <perch:content id="social_image" type="image" label="Social Image" />
-
 
 <perch:related id="related" collection="Speakers" label="Related">
 	<perch:content id="slug" />

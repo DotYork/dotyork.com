@@ -2,7 +2,10 @@
 	<h3 class="t-s p-section__title is-yellow is-center">Tickets</h3>
 
 	<p class="t-xl t-weight-bold p-talk__tickets__name">
-		See <perch:content id="first_name" />  <perch:content id="last_name" /> 
+		See 
+		<perch:related id="speaker" collection="Speakers">
+			<perch:content id="first_name" /> 
+		</perch:related> 
 		<perch:related id="event" collection="Events">
 			at <perch:content id="title" />!
 		</perch:related>
@@ -10,7 +13,7 @@
 
 	<p class="t-l p-talk__tickets__date">
 		<perch:related id="event" collection="Events">
-			<perch:content id="date" format="jS F Y" /> 
+			<perch:content id="date" format="l jS F Y" /> 
 		</perch:related>
 	</p>
 

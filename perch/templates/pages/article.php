@@ -13,37 +13,27 @@
     'meta' => 'article'
   ]); 
 
-  if (perch_get('category', true) == 'draft') {
+  if (perch_get('preview', true) == 'all') {
     perch_collection('Articles', [
-      'sort'        => 'date',
-      'sort-order'  => 'DESC',
       'filter'      => 'slug',
       'match'       => 'eq',
       'value'       => perch_get("slug"),
-      'count'      => 1,
       'template'    => 'blog/article.html'
     ]);
-  } else if (perch_get('category', true) == 'interviews') {
-    perch_collection('Articles', [
-      'sort'        => 'date',
-      'sort-order'  => 'DESC',
-      'filter'      =>  array(
-        array(
-          'filter'      => 'date',
-          'match'       => 'lte',
-          'value'       => Date('Y-m-d'),
-        ),
-        array(
-          'filter'      => 'slug',
-          'match'       => 'eq',
-          'value'       => perch_get("slug"),
-        )
-      ),
-      'count'      => 1,
-      'template'    => 'blog/interview.html'
-    ]);
   } else {
-    perch_collection('Articles', [
+
+    if (perch_get('category', true) == 'draft') {
+      perch_collection('Articles', [
+        'sort'        => 'date',
+        'sort-order'  => 'DESC',
+        'filter'      => 'slug',
+        'match'       => 'eq',
+        'value'       => perch_get("slug"),
+        'count'      => 1,
+        'template'    => 'blog/article.html'
+      ]);
+    } else if (perch_get('category', true) == 'interviews') {
+      perch_collection('Articles', [
         'sort'        => 'date',
         'sort-order'  => 'DESC',
         'filter'      =>  array(
@@ -53,19 +43,39 @@
             'value'       => Date('Y-m-d'),
           ),
           array(
-            'filter'      => 'category',
-            'match'       => 'eq',
-            'value'       => perch_get('category'),
-          ),
-          array(
             'filter'      => 'slug',
             'match'       => 'eq',
             'value'       => perch_get("slug"),
           )
         ),
         'count'      => 1,
-        'template'    => 'blog/article.html'
-    ]);
+        'template'    => 'blog/interview.html'
+      ]);
+    } else {
+      perch_collection('Articles', [
+          'sort'        => 'date',
+          'sort-order'  => 'DESC',
+          'filter'      =>  array(
+            array(
+              'filter'      => 'date',
+              'match'       => 'lte',
+              'value'       => Date('Y-m-d'),
+            ),
+            array(
+              'filter'      => 'category',
+              'match'       => 'eq',
+              'value'       => perch_get('category'),
+            ),
+            array(
+              'filter'      => 'slug',
+              'match'       => 'eq',
+              'value'       => perch_get("slug"),
+            )
+          ),
+          'count'      => 1,
+          'template'    => 'blog/article.html'
+      ]);
+    }
   }
 
   echo '<section class="b-container p-article-related">';
