@@ -9,9 +9,6 @@
 		function setLazy(){
 		    lazyBg = document.getElementsByClassName('js-lazyBg');
 		    lazy = document.getElementsByClassName('js-lazy');
-
-		    console.log('Found ' + lazyBg.length + ' lazyBg images');
-		    console.log('Found ' + lazy.length + ' lazy images');
 		} 
 
 		function lazyLoad(){
@@ -60,6 +57,8 @@
 		    }
 		}	
 	</script>
+
+	<script async src="/assets/js/master.js"></script>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
