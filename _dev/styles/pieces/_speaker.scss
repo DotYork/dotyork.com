@@ -78,3 +78,31 @@
     }
   }
 }
+
+
+
+
+// Card
+// - in blog posts and other pages
+
+.p-speaker-card {
+	@include clearfix();
+
+	background: $color-green;
+	border: solid 5px $color-green;
+	border-radius: 10px;
+	color: white;
+	display: block;
+	margin-bottom: 2rem;
+	padding: 30px 20px;
+	transition: all 0.1s ease-in-out;
+
+	&:hover {
+		background: none;
+		
+		.p-speaker__img { border-color: $color-green; }
+		.p-speaker__name { color: $color-green; }
+		.p-speaker__title { color: $color-dark; }
+		.p-page__read-more { background-position: 0 -45px;}
+	}
+}

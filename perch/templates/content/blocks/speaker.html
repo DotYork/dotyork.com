@@ -1,0 +1,17 @@
+<perch:related id="speaker" collection="Speakers">
+
+<a href="/speakers/<perch:content id="slug" type="slug" />" class="p-speaker-card b-media">
+  <img src="<perch:content id="photo" label="Headshot" type="image" width="200" density="1.5" />" alt="<perch:content id="title" />" class="p-speaker__img b-media__img" />
+
+  <div class="b-media__body">
+    <h1 class="t-lr p-speaker__name"><perch:content id="first_name" /> <perch:content id="last_name" /></h1>
+    <perch:if exists="job_title">
+      <p class="t-s p-section__title is-yellow p-speaker__title"><perch:content id="job_title" /></p>
+    </perch:if>
+
+    <span class="p-page__read-more is-yellow"></span>
+    
+  </div>
+</a>
+
+</perch:related>

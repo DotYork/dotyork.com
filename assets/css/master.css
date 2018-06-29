@@ -1692,6 +1692,30 @@ p.p-event-archive__meta {
     .p-speaker__social .p-social-item svg:hover {
       fill: #FFED00; }
 
+.p-speaker-card {
+  background: #0C9D5E;
+  border: solid 5px #0C9D5E;
+  border-radius: 10px;
+  color: white;
+  display: block;
+  margin-bottom: 2rem;
+  padding: 30px 20px;
+  transition: all 0.1s ease-in-out; }
+  .p-speaker-card:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .p-speaker-card:hover {
+    background: none; }
+    .p-speaker-card:hover .p-speaker__img {
+      border-color: #0C9D5E; }
+    .p-speaker-card:hover .p-speaker__name {
+      color: #0C9D5E; }
+    .p-speaker-card:hover .p-speaker__title {
+      color: #21174C; }
+    .p-speaker-card:hover .p-page__read-more {
+      background-position: 0 -45px; }
+
 .p-talk--two {
   border-top: solid 10px #3DD9FC; }
 
