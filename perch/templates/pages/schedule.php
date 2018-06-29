@@ -48,17 +48,18 @@
 
 <?php
   
+  echo '<div class="b-container">';
+    echo '<div class="p-page">';
+      echo '<section class="p-schedule">';
+        perch_content('Schedule');
+      echo '</section>';
 
-  echo '<div class="b-container p-page">';
-    echo '<section class="p-schedule">';
-      perch_content('Schedule');
-    echo '</section>';
+      // echo '<aside class="b-aside">';
+      //   perch_content('Location');
 
-    // echo '<aside class="b-aside">';
-    //   perch_content('Location');
-
-    //   perch_content('Evening');
-    // echo '</aside>';
+      //   perch_content('Evening');
+      // echo '</aside>';
+    echo '</div>';
   echo '</div>';
 
   perch_layout('partials/newsletter');

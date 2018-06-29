@@ -112,6 +112,153 @@
 //------------------------------------//
 //  Mobile
 //------------------------------------//
+$burger-height : 5px;
+$burger-width : 30px;
+$burger-gutter : 5px;
+$burger-color : #fff;
+$burger-radius : 0;
+$burger-transition: .3s;
+
+.p-nav__toggle {
+  display: none;
+}
+
+
+
+@include mq(767px, max) {
+  .p-nav-inner {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    background: $color-blue;
+    transition: right $burger-transition ease-in-out;
+    z-index: 99999;
+
+    li {
+      display: block;
+      margin-right: 0;
+      padding: 20px 0;
+      text-align: center;
+
+      &:not(:last-child) {
+        border-bottom: solid 1px white;
+      }
+    }
+  }
+
+  .p-nav__toggle {
+    display: block;
+    margin-right: 0;
+    transition: margin-right $burger-transition ease-in-out;
+  }
+  
+  .p-nav__toggle-inner {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2px;
+
+    span {
+
+        margin-top: $burger-height + $burger-gutter;
+        margin-bottom: $burger-height + $burger-gutter;
+        position: relative;
+        user-select: none;
+    
+        &, &::before, &::after {
+            background-color: $burger-color;
+            display: block;
+            height: $burger-height;
+            width: $burger-width;
+
+            @if $burger-radius != 0 {
+                border-radius: $burger-radius;
+            }
+    
+            @if $sass-burger-add-vendor-prefixes {
+                -webkit-transition-property: background-color, -webkit-transform;
+                -moz-transition-property: background-color, -moz-transform;
+                -o-transition-property: background-color, -o-transform;
+            }
+            transition-property: background-color, transform;
+    
+            @if $sass-burger-add-vendor-prefixes {
+                -webkit-transition-duration: $burger-transition;
+                -moz-transition-duration: $burger-transition;
+                -o-transition-duration: $burger-transition;
+            }
+            transition-duration: $burger-transition;
+        }
+    
+        &::before, &::after {
+            position: absolute;
+            content: "";
+        }
+    
+        &::before {
+            top: -($burger-height + $burger-gutter);
+        }
+    
+        &::after {
+            top: $burger-height + $burger-gutter;
+        }
+    }
+    
+  }
+  
+  .p-nav__toggle-checkbox {
+    
+  }
+
+  .p-nav__toggle-checkbox:checked~.p-nav-inner {
+    right: 0;
+  }
+
+  .p-nav__toggle-checkbox:checked~.p-nav__toggle {
+    margin-right: 300px;
+  }
+
+  .p-nav__toggle-checkbox:checked~.p-nav__toggle .p-nav__toggle-inner span {
+    & {
+      background-color: transparent;
+    }
+    &::before {
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        }
+        transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+    }
+    &::after {
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        }
+        transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+    }
+  }
+ 
+}
+
+
+
+@include mq(500px, max) {
+  .p-nav-inner {
+    right: -200px;
+    width: 200px;
+  }
+
+  .p-nav__toggle-checkbox:checked~.p-nav__toggle {
+    margin-right: 200px;
+  }  
+}
+
 
 // @include mq(650px, max) {
 // 	.p-header__nav {

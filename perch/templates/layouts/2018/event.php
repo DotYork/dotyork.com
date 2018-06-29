@@ -2,7 +2,7 @@
 
 perch_content('Banner');  //  yellow
 
-perch_content('About'); //  purple  TODO - redesign
+//perch_content('About'); //  purple  TODO - redesign
 
 
 //  Get the speakers, 
@@ -14,9 +14,9 @@ perch_layout('conf/speakers', [
   'title' => 'Featuring'
 ]);  //  green
 
-perch_content('Sessions');  //  white
+// perch_content('Sessions');  //  white
 
-perch_content('Location');  //  blue
+// perch_content('Location');  //  blue
 
 perch_layout('partials/blog', [
   'category' => '2018'

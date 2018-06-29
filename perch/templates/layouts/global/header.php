@@ -13,7 +13,11 @@
 
 		<?php if (perch_layout_var('landing', true) != 'is-landing') { ?>
 		<nav class="p-nav">
-			<ul class="b-nav">
+			<input type="checkbox" class="p-nav__toggle-checkbox u-hidden" id="nav_toggle_checkbox" />
+			<label for="nav_toggle_checkbox" class="p-nav__toggle">
+				<span class="p-nav__toggle-inner"><span></span></span>
+			</label>
+			<ul class="b-nav p-nav-inner">
 				<?php	
 					// When there’s an event - navgroup => conf | template => conf.html
 					// When there isn’t an event - navgroup => header | template => header.html + delete the tickets item

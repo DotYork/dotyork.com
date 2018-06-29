@@ -17,5 +17,8 @@
   "author": {
     "email": "rick@rickchadwick.co.uk",
     "name": "rickary"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.0.1"
   }
 }
