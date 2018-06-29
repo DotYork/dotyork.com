@@ -28,18 +28,15 @@
     'meta' => 'archive',
     'nav'   => 'event'
   ]); 
-
+?>
   
-  echo '<div class="p-page__header">';
-    echo '<h1 class="t-xl">Sessions</h1>';
-    perch_collection('Events', [
-      'filter'      => 'date',
-      'match'       => 'eqbetween',
-      'value'       => $year_from . ' ,' . $year_to,
-      'template'    => 'events/title_date.html'
-    ]);
-  echo '</div>';
-
+  <div class="p-banner is-purple">
+    <div class="b-container">
+      <h1 class="p-banner__title">Se<span class="t-alt-font">s</span>sio<span class="t-alt-font">n</span>s</h1>
+      <p class="p-banner__subtitle is-yellow">At <a href="<?php echo $slug ?>"><?php echo $title; ?></a></p>
+    </div>
+  </div>
+<?php
   echo '<section class="p-page__list">';
       perch_collection('Sessions', [
           'filter' => 'event.slug',
@@ -49,11 +46,10 @@
       ]);
   echo '</section>';
 
-  perch_collection('Events', [
-    'filter'      => 'date',
-    'match'       => 'eqbetween',
-    'value'       => $year_from . ' ,' . $year_to,
-    'template'    => 'collections/events_sponsors.html'
+  perch_layout('partials/newsletter');
+
+  perch_layout('partials/partners', [
+    'partners' => 'all'
   ]);
  
 

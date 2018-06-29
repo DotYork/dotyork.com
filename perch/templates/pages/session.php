@@ -18,15 +18,10 @@
   ]);  
 
   
-  perch_layout('2017/session');
+  perch_layout('2018/session');
 
-  perch_collection('Events', [
-    'filter'      => 'date',
-    'match'       => 'eqbetween',
-    'value'       => $year_from . ' ,' . $year_to,
-    'template'    => 'collections/events_sponsors.html'
+  perch_layout('partials/partners', [
+    'partners' => 'all'
   ]);
- 
 
   perch_layout('global/footer');
- ?>

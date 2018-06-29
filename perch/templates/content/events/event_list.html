@@ -1,20 +1,23 @@
 <perch:before><section class="p-page__list"></perch:before>
 
 	<div class="p-section p-page__list-item">
+		<div class="b-container">
 
-		<h2 class="t-xl p-page__list-item__title"><perch:content id="title" /></h2>
+			<h2 class="t-xl p-page__list-item__title"><perch:content id="title" /></h2>
 
-		<p class="p-meta p-page__list-item__meta"><perch:content id="date" format="jS F Y" />, <perch:content id="venue_title" /></p>
-		
+			<p class="p-meta p-page__list-item__meta"><perch:content id="date" format="jS F Y" />, <perch:content id="venue_title" /></p>
+			
 
-		<div class="p-event__btns">
-			<perch:if exists="btn_url1">
-				<a href="<perch:content id="btn_url1" />" class="b-btn b-btn--border b-btn--small"><perch:content id="btn_text1" /></a>
-			</perch:if>
+			<div class="p-event__btns">
+				<perch:if exists="btn_url1">
+					<a href="<perch:content id="btn_url1" />" class="b-btn b-btn--border b-btn--small"><perch:content id="btn_text1" /></a>
+				</perch:if>
 
-			<perch:if exists="url_video">
-				<a href="<perch:content id="url_video" />" class="b-btn b-btn--theme b-btn--small">Watch Videos</a>
-			</perch:if>
+				<perch:if exists="url_video">
+					<a href="<perch:content id="url_video" />" class="b-btn b-btn--theme b-btn--small">Watch Videos</a>
+				</perch:if>
+			</div>
+
 		</div>
 
 	</div>

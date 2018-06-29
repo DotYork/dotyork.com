@@ -28,41 +28,43 @@
     'meta' => 'archive',
     'nav'   => 'event'
   ]); 
+?>
 
+  <div class="p-banner is-purple">
+		<div class="b-container">
+			<h1 class="p-banner__title">Sc<span class="t-alt-font">h</span>ed<span class="t-alt-font">u</span>le</h1>
+			<p class="p-banner__subtitle is-yellow">
+        <?php
+          perch_collection('Events', [
+            'filter'      => 'date',
+            'match'       => 'eqbetween',
+            'value'       => $year_from . ' ,' . $year_to,
+            'template'    => 'events/title_date.html'
+          ]);
+        ?>
+      </p>
+		</div>
+  </div>
+
+<?php
   
-  echo '<div class="p-page__header">';
-    echo '<h1 class="t-xl">Schedule</h1>';
-    perch_collection('Events', [
-      'filter'      => 'date',
-      'match'       => 'eqbetween',
-      'value'       => $year_from . ' ,' . $year_to,
-      'template'    => 'events/title_date.html'
-    ]);
-  echo '</div>';
 
-  echo '<div>';
-    echo '<section class="b-main p-schedule">';
+  echo '<div class="b-container p-page">';
+    echo '<section class="p-schedule">';
       perch_content('Schedule');
     echo '</section>';
 
-    echo '<aside class="b-aside">';
-      perch_content('Location');
+    // echo '<aside class="b-aside">';
+    //   perch_content('Location');
 
-      perch_content('Evening');
-    echo '</aside>';
+    //   perch_content('Evening');
+    // echo '</aside>';
   echo '</div>';
 
-  echo '<section class="p-section is-blue p-schedule__tickets">';
-    perch_content_custom('Tickets',[
-          'page' => '/'
-        ]); 
-  echo '</section>';
+  perch_layout('partials/newsletter');
 
-  perch_collection('Events', [
-    'filter'      => 'date',
-    'match'       => 'eqbetween',
-    'value'       => $year_from . ' ,' . $year_to,
-    'template'    => 'collections/events_sponsors.html'
+  perch_layout('partials/partners', [
+    'partners' => 'all'
   ]);
  
 

@@ -55,8 +55,6 @@ $close-quote 	: "\201D";
 
 	blockquote {
 	    quotes:"#{$open-quote}" "#{$close-quote}";
-	    margin-bottom: $gutter*2;
-	    margin-left: 20px;
 	}
 
 
@@ -66,17 +64,9 @@ $close-quote 	: "\201D";
 	//
 
 	blockquote p {
-		margin: 0;
-
-		font-size: 22px !important;
-
 		&:before 				{ content:"#{$open-quote}"; }
 	    &:after 				{ content:""; }
 	    &:last-of-type:after 	{ content:"#{$close-quote}"; }
-
-	    &:last-of-type {
-	    	margin-bottom: 0 !important;
-	    }
 	}
 
 
@@ -86,9 +76,6 @@ $close-quote 	: "\201D";
 	//
 
 	cite {
-		display: block;
-		margin-top: $gutter/4;
-
 	    &:before {
 		    content: "\2014 \2009";
 	    }

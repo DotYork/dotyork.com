@@ -4,15 +4,10 @@
     'body-class' => 'blog',
     'title' => 'Dot York Updates',
   ]); 
-  ?>
-  <div class="p-section is-top-section">
-    <div class="b-container">
-
-  <?php
 
   $category = perch_get('category', true);
 
-  if (($category == '1') || ($category != 'all')) {
+  if (($category == '1')) {
     
     $title = perch_collection('Events', [
       'count'     => 1,
@@ -45,14 +40,28 @@
   if (($category != 'all')) {
 
     if ($category == 'dotyork' || $category == 'york') { 
-      $category_title = $category .' News';
+      if ($category == 'dotyork') {
+        $category_title = 'DotYork News';
+      } else if ($category == 'york') {
+        $category_title = 'York News';
+      }
     } else if ($category == 'interviews') {
       $category_title = 'Interviews';
     } else {
       $category_title = $category .' Updates';
     }
+  ?>
 
-    echo '<h1 class="t-s p-section__title is-center is-purple">'.$category_title.' <a href="/blog/all" class="p-section__title__all">view all</a></h1>';
+  <div class="p-banner is-purple">
+		<div class="b-container">
+			<h1 class="p-banner__title js-altFont"><?php echo $category_title; ?></h1>
+			<p class="p-banner__subtitle is-yellow"><a href="/blog/all" class="p-section__title__all">View All Articles</a></p>
+		</div>
+  </div>
+  
+  <div class="b-container">
+
+  <?php
     perch_collection('Articles', [
       'sort'        => 'date',
       'sort-order'  => 'DESC',
@@ -72,7 +81,16 @@
     ]);
 
   } else {
-    echo '<h1 class="t-s p-section__title is-center is-purple">News &amp; Updates</h1>';
+  ?>
+
+  <div class="p-banner is-purple">
+		<div class="b-container">
+			<h1 class="p-banner__title js-altFont">DotYork Blog</h1>
+		</div>
+	</div>
+
+  <div class="b-container">
+  <?php
     perch_collection('Articles', [
       'sort'        => 'date',
       'sort-order'  => 'DESC',
@@ -82,14 +100,11 @@
       'template'    => 'blog/grid.html'
     ]);
   }
-?>
 
-  
-      
-    </div>
+  ?>
   </div>
+  <?php
 
-<?php
   perch_layout('partials/newsletter');
 
   if (preg_match("/\d{4}/", $category)) {

@@ -70,11 +70,17 @@
   @include font-size(14);
 
   color: $color-yellow;
+  display: inline-block;
   font-weight: $font-weight-bold;
   margin-top: .75rem;
 
   .is-yellow & { color: black}
   .is-purple & { color: $color-yellow}
+
+  a {
+    border-bottom: none;
+    color: currentColor;
+  }
 
   @include mq(480px) {
     margin-top: 1rem;

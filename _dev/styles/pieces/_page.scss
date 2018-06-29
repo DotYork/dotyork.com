@@ -3,30 +3,52 @@
 	max-width: 750px;
 }
 
+.p-page__footnote {
+	background: $color-neutral;
+	margin-bottom: 2rem;
+	padding: 1rem;
+
+	p {
+		@include font-size-s();
+
+		a {
+			border-color: $color-neutral;
+
+			&:hover { border-color: $color-yellow; }
+		}
+	}
+}
+
+.p-page__read-more {
+	display: block;
+
+	width: 35px;
+	height: 15px;
+
+	background: url('/assets/img/arrow.png') no-repeat 0 0;
+	background-size: 100%;
+
+	text-indent: -999em;
+
+	&.is-yellow {
+		background-position: 0 -15px;
+	}
+
+	&.is-purple {
+		background-position: 0 -30px;
+	}
+
+	&.is-green {
+		background-position: 0 -45px;
+	}
+}
+
 
 
 // Not sure if anything below this is still used?
 
 
-.p-page__footnote {
-	margin-bottom: 30px;
-	padding: 10px;
-	background: $color-neutral;
 
-	p {
-		font-size: 14px;
-		font-style: italic;	
-
-		a {
-			border-color: $color-neutral;
-
-			&:hover {
-				border-color: $color-yellow;
-			}
-		}
-	}
-	
-}
 
 .p-page__faq {
 	margin-left: 0 !important;
@@ -80,36 +102,10 @@
 
 
 
-.p-page__quote {
-
-	
-}
 
 
 
-.p-page__read-more {
-	display: block;
 
-	width: 35px;
-	height: 15px;
-
-	background: url('/assets/img/arrow.png') no-repeat 0 0;
-	background-size: 100%;
-
-	text-indent: -999em;
-
-	&.is-yellow {
-		background-position: 0 -15px;
-	}
-
-	&.is-purple {
-		background-position: 0 -30px;
-	}
-
-	&.is-green {
-		background-position: 0 -45px;
-	}
-}
 
 
 
@@ -121,9 +117,9 @@
 }
 
 .p-page__list-item {
-	padding: 100px 20px;
-	text-align: center;
+	
 	color: white;
+	padding: 100px 20px;
 
 
 	&:nth-child(4n+1) {
@@ -152,13 +148,15 @@
 }
 
 .p-page__list-item__title {
-	margin-bottom: 20px;
+	@include font-size-xl(500);
+
+	margin-bottom: 1rem;
 }
 
 .p-page__list-item__meta {
-	margin-bottom: 20px;
+	@include font-size-m();
 }
 
 .p-page__list-item__btn {
-	margin-top: 20px;
+	margin-top: 2rem;
 }

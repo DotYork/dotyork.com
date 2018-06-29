@@ -1,4 +1,9 @@
 <div class="p-section p-page__list-item">
-	<h2 class="t-xl p-page__list-item__title"><perch:content id="title" /></h2>
-	<a href="/sessions/<perch:content id="slug" />" class="b-btn b-btn--border b-btn--small p-page__list-item__btn">Find out more</a>
+	<div class="b-container">
+		<h2 class="t-xl p-page__list-item__title"><perch:content id="title" /></h2>
+		<div class="p-page p-wysiwyg">
+				<perch:content id="desc" type="textarea" markdown="true" editor="simplemde" size="s" label="Description" />
+				<a href="/sessions/<perch:content id="slug" />" class="b-btn b-btn--border p-page__list-item__btn">Find out more</a>
+		</div>
+	</div>
 </div>
