@@ -7,20 +7,20 @@
 	
 
 	&.is-blue {
-		background: $color-blue url('/assets/img/bg.png') bottom center no-repeat;
+		background: $color-blue;
 		color: white;
 		background-size: 900px;
 	}
 
 	&.is-purple {
-		background: $color-purple url('/assets/img/bg.png') top center no-repeat;
+		background: $color-purple;
 		color: white;
 		background-size: 900px;
 		
 	}
 
 	&.is-green {
-		background: $color-green url('/assets/img/bg.png') center center no-repeat;
+		background: $color-green;
 		color: white;
 		background-size: 900px;
 	}

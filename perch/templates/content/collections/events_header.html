@@ -1,13 +1,14 @@
-<section class="p-event-archive__info">
-	
-	
-	<div class="p-page__header">
-		<h1 class="t-xl t-weight-bold p-event-archive__title"><perch:content id="title" /></h1>
-		<p class="t-s p-event-archive__meta"><perch:content id="date" format="l jS F Y" /> at <a href="<perch:content id="venue_postcode" />" target="_blank"><perch:content id="venue_title" /></a></p>
+<section class="p-banner p-banner--full is-purple">
+  <div class="b-container">
+    <h1 class="p-banner__title js-altFont"><perch:content id="title" /></h1>
 
-		<perch:if exists="outro">
-			<p class="p-event-archive__outro"><perch:content id="outro" /></p>
-		</perch:if>
+    <p class="t-l p-banner__subtitle"><perch:content id="date" format="l jS F Y" /> at <a href="<perch:content id="venue_postcode" />" target="_blank"><perch:content id="venue_title" /></a></p>
+  </div>
+</section>
+
+<div class="b-container">
+	<div class="p-page p-wysiwyg">
+		<p><perch:content id="outro" /></p>
 
 		<perch:if exists="url_photo">
 			<a href="<perch:content id="url_photo" />" target="_blank" class="b-btn b-btn--border p-event-archive__btn">View Photos</a>
@@ -16,8 +17,5 @@
 		<perch:if exists="url_video">
 			<a href="<perch:content id="url_video" />" target="_blank" class="b-btn b-btn--theme p-event-archive__btn">Watch Videos</a>	
 		</perch:if>
-		
 	</div>
-
-	
-</section>
+</div>

@@ -10,7 +10,8 @@
     margin-bottom: 2rem;
   }
 
-    p + h2 {
+    p + h2,
+    .p-wysiwyg__embed + h2 {
       margin-top: 4rem;
     }
 
@@ -35,8 +36,11 @@
   ul, ol {
     @include font-size-m();
 
-    li {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
 
+    li {
+      margin-bottom: .5rem;
     }
   }
 
@@ -66,4 +70,11 @@
     margin-bottom: 2rem;
   }
 
+  img {
+    margin-bottom: 2rem;
+  }
+}
+
+.p-wysiwyg__embed {
+  margin-bottom: 2rem;
 }
