@@ -11,13 +11,16 @@
 //------------------------------------//
 
 .p-banner {
+  overflow: hidden;
   padding: 200px 0 150px 0;
+  position: relative;
 
   &, a {
     color: white;
   }
   
   &.is-blue   { background: $color-blue;}
+  &.is-dark   { background: $color-dark;}
   &.is-purple { background: $color-purple;}
   &.is-green  { background: $color-green;}
   &.is-yellow { 
@@ -88,5 +91,219 @@
 
   @include mq(768px) {
     @include font-size(20);
+  }
+}
+
+
+
+
+
+//------------------------------------//
+//  Shapes
+//------------------------------------//
+
+@mixin banner-shape($color) {
+  fill: $color;
+  position: absolute;
+  z-index: 0;
+}
+
+.p-banner__bg-shape--dots {
+  //display: none;
+  height: 0;
+  width: 0;
+  #dot {
+    fill: rgba(255,255,255,.1);
+  }
+}
+
+.home {
+  .p-banner__bg-shape--1 { 
+    @include banner-shape($color-yellow);
+
+    bottom: -100px;
+    fill: url(#hexapolka);
+    right: -500px;
+    transform: rotate(70deg);
+    width: 900px;
+
+    @include mq(767px) {
+      bottom: -100px;
+      right: -600px;
+      width: 1200px;
+    }
+  }
+  
+  .p-banner__bg-shape--2 { display: none; }
+
+  .p-banner__bg-shape--3 { 
+    display: none;
+
+    @media screen and (min-height: 550px) {
+      @include banner-shape($color-yellow);
+      bottom: -120px;
+      display: block;
+      left: -100px;
+      transform: rotate(300deg);
+      width: 200px;
+    }
+  }
+
+  .p-banner__bg-shape--4 {
+    @include banner-shape($color-dark);
+    
+    right: -100px;
+    top: -50px;
+    width: 500px;
+
+    @include mq(767px) {
+      right: -200px;
+      top: -150px;
+      width: 800px;
+    }
+
+    @include mq(900px) {
+      right: -200px;
+      top: -200px;
+      width: 1000px;
+    }
+  }
+}
+
+.speakers {
+  .p-banner__bg-shape--1 { display: none; }
+  
+  .p-banner__bg-shape--2 { display: none; }
+
+  .p-banner__bg-shape--3 { display: none; }
+
+  .p-banner__bg-shape--4 {
+    @include banner-shape($color-dark);
+    
+    right: -400px;
+    bottom: -150px;
+    width: 1200px;
+  }
+}
+
+
+.session {
+  .p-banner__bg-shape--3 { 
+    @include banner-shape($color-blue);
+
+    bottom: -50px;
+    right: -100px;
+    width: 200px;
+
+    @include mq(767px) {
+      bottom: -50px;
+      right: -100px;
+      width: 250px;
+    }
+  }
+
+  .p-banner__bg-shape--4 {
+    @include banner-shape($color-purple);
+    
+    left: -100px;
+    top: -150px;
+    transform: scaleX(-1);
+    width: 600px;
+
+    @include mq(767px) {
+      left: -150px;
+      top: -200px;
+      width: 800px;
+    }
+  }
+}
+
+.blog {
+  .p-banner__bg-shape--1 { 
+    @include banner-shape($color-yellow);
+
+    bottom: -100px;
+    fill: url(#hexapolka);
+    right: -400px;
+    transform: rotate(50deg);
+    width: 900px;
+
+    @include mq(767px) {
+      bottom: -100px;
+      right: -500px;
+      width: 1200px;
+    }
+  }
+
+  .p-banner__bg-shape--4 {
+    @include banner-shape($color-dark);
+    
+    right: -100px;
+    top: -50px;
+    transform: rotate(10deg);
+    width: 500px;
+
+    @include mq(767px) {
+      right: -200px;
+      top: -150px;
+      width: 800px;
+    }
+
+    @include mq(900px) {
+      right: -200px;
+      top: -250px;
+      width: 1000px;
+    }
+  }
+}
+
+.about {
+  .p-banner__bg-shape--1 { 
+    @include banner-shape($color-yellow);
+
+    bottom: -100px;
+    fill: url(#hexapolka);
+    right: -500px;
+    transform: rotate(70deg);
+    width: 900px;
+
+    @include mq(767px) {
+      bottom: -100px;
+      right: -600px;
+      width: 1200px;
+    }
+  }
+
+  .p-banner__bg-shape--3 { 
+    display: none;
+
+    @media screen and (min-height: 550px) {
+      @include banner-shape($color-yellow);
+      bottom: -120px;
+      display: block;
+      left: -100px;
+      transform: rotate(300deg);
+      width: 200px;
+    }
+  }
+
+  .p-banner__bg-shape--4 {
+    @include banner-shape($color-blue);
+    
+    right: -100px;
+    top: -50px;
+    width: 500px;
+
+    @include mq(767px) {
+      right: -200px;
+      top: -150px;
+      width: 800px;
+    }
+
+    @include mq(900px) {
+      right: -200px;
+      top: -200px;
+      width: 1000px;
+    }
   }
 }

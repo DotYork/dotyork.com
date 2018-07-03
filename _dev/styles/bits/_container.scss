@@ -3,13 +3,12 @@
 //------------------------------------//
 
 .b-container {
-	position: relative;
-	z-index: 0;
-	
-	width: 100%;
-	max-width: $bp-max;
 	margin: 0 auto;
+	max-width: $bp-max;
 	padding: 0 $gutter;
+	position: relative;
+	width: 100%;
+	z-index: 1;
 }
 
 .b-container--smaller {

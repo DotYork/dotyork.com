@@ -1,6 +1,6 @@
 <?php 
   perch_layout('global/header', [
-    'body-class' => 'events',
+    'body-class' => 'about',
     'title' => '',
   ]); 
 

@@ -8,7 +8,7 @@
       ], true);
 
   perch_layout('global/header', [
-    'body-class' => 'blog-post',
+    'body-class' => 'blog',
     'title' => $title . " | Dot York Blog",
     'meta' => 'article'
   ]); 

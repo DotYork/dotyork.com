@@ -11,8 +11,7 @@
     'body-class' => 'speakers',
     'title' => $name . " | Dot York",
     'meta' => 'speaker',
-		'nav'		=> 'event',
-		'background' => 'is-green'
+		'nav'		=> 'event'
   ]); 
 
   	

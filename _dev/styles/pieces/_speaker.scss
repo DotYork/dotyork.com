@@ -1,8 +1,12 @@
-.p-speaker {
-	padding: 200px 0px 150px 0px;
+body.speakers {
+	overflow-x: hidden;
+}
 
-	background: $color-green url('/assets/img/bg.png');
+.p-speaker {
+
+	background: $color-green;
 	color: white;
+	padding: 200px 0px 150px 0px;
 
 	@include mq(767px, max) {
 		padding: 150px 0px 100px 0px;
@@ -11,6 +15,21 @@
 	@include mq(500px, max) {
 		padding: 100px 0px 50px 0px;
 	}
+
+	.p-banner__bg-shape--4 {
+    @include banner-shape($color-dark);
+    
+    right: -200px;
+		top: -250px;
+		transform: rotate(30deg);
+		width: 800px;
+		
+		@include mq(900px) {
+			right: -300px;
+			top: -200px;
+			width: 1000px;
+		}
+  }
 }
 
 .p-speaker__img {
