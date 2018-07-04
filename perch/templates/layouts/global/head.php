@@ -4,7 +4,7 @@
    	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<link href='/assets/css/master.css?v=2.0' rel='stylesheet' />
+	<link href='/assets/css/master.css?v=2.1' rel='stylesheet' />
 	<link rel="stylesheet" href="https://use.typekit.net/ssn0xfy.css">
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
